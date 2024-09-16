@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\Nhom13_ST3_QuanLyDatSanTheThao\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BC03AD9C-0FC9-4DD3-B966-A2218340145F}|DTO\\DTO.csproj|c:\\users\\admin\\source\\repos\\nhom13_st3_quanlydatsanthethao\\dto\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC03AD9C-0FC9-4DD3-B966-A2218340145F}|DTO\\DTO.csproj|solutionrelative:dto\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2012FF64-B696-43CC-858C-2E3D8CABA5A2}|DAL\\DAL.csproj|c:\\users\\admin\\source\\repos\\nhom13_st3_quanlydatsanthethao\\dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2012FF64-B696-43CC-858C-2E3D8CABA5A2}|DAL\\DAL.csproj|solutionrelative:dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{257A48DF-9DB4-45F3-BCFA-A677BE2611F7}|BUS\\BUS.csproj|c:\\users\\admin\\source\\repos\\nhom13_st3_quanlydatsanthethao\\bus\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{257A48DF-9DB4-45F3-BCFA-A677BE2611F7}|BUS\\BUS.csproj|solutionrelative:bus\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\source\\repos\\nhom13_st3_quanlydatsanthethao\\gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Nhom13_ST3_QuanLyDatSanTheThao\\DTO\\Class1.cs",
+              "RelativeDocumentMoniker": "DTO\\Class1.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Nhom13_ST3_QuanLyDatSanTheThao\\DTO\\Class1.cs",
+              "RelativeToolTip": "DTO\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T09:39:55.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Nhom13_ST3_QuanLyDatSanTheThao\\DAL\\Class1.cs",
+              "RelativeDocumentMoniker": "DAL\\Class1.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Nhom13_ST3_QuanLyDatSanTheThao\\DAL\\Class1.cs",
+              "RelativeToolTip": "DAL\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T09:39:48.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Nhom13_ST3_QuanLyDatSanTheThao\\BUS\\Class1.cs",
+              "RelativeDocumentMoniker": "BUS\\Class1.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Nhom13_ST3_QuanLyDatSanTheThao\\BUS\\Class1.cs",
+              "RelativeToolTip": "BUS\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T09:39:40.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\Form1.cs",
+              "RelativeDocumentMoniker": "GUI\\Form1.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\Form1.cs [Design]",
+              "RelativeToolTip": "GUI\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T09:39:29.149Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
