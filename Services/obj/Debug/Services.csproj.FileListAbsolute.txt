@@ -1,0 +1,6 @@
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\Services\bin\Debug\Services.dll
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\Services\bin\Debug\Services.pdb
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\Services\obj\Debug\Services.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\Services\obj\Debug\Services.dll
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\Services\obj\Debug\Services.pdb

@@ -1,0 +1,6 @@
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\API\bin\Debug\API.dll
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\API\bin\Debug\API.pdb
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\API\obj\Debug\API.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\API\obj\Debug\API.dll
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\API\obj\Debug\API.pdb

@@ -1,0 +1,7 @@
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\LINQ\bin\Debug\LINQ.dll.config
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\LINQ\bin\Debug\LINQ.dll
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\LINQ\bin\Debug\LINQ.pdb
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\LINQ\obj\Debug\LINQ.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\LINQ\obj\Debug\LINQ.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\LINQ\obj\Debug\LINQ.dll
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\LINQ\obj\Debug\LINQ.pdb
