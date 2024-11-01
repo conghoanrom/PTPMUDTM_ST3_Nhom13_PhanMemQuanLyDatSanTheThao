@@ -15,11 +15,6 @@ C:\Users\ADMIN\source\repos\Nhom13_ST3_QuanLyDatSanTheThao\GUI\obj\Debug\GUI.pdb
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\GUI\bin\Debug\GUI.exe.config
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\GUI\bin\Debug\GUI.exe
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\GUI\bin\Debug\GUI.pdb
-C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\GUI\bin\Debug\ComponentFactory.Krypton.Docking.dll
-C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\GUI\bin\Debug\ComponentFactory.Krypton.Navigator.dll
-C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\GUI\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
-C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\GUI\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
-C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\GUI\bin\Debug\ComponentFactory.Krypton.Workspace.dll
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\GUI\bin\Debug\DTO.dll
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\GUI\bin\Debug\DTO.pdb
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\GUI\bin\Debug\ComponentFactory.Krypton.Docking.pdb

@@ -1,10 +1,5 @@
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\MyControls.dll
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\MyControls.pdb
-C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Docking.dll
-C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Navigator.dll
-C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
-C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
-C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Workspace.dll
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Docking.pdb
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
@@ -18,3 +13,10 @@ C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.csproj.Up2Date
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.dll
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.pdb
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\LINQ.dll
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\LINQ.pdb
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\bin\Debug\LINQ.dll.config
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.FieldControl.resources
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.FieldsControl.resources
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.EmployeesControl.resources
+C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.EmployeeControl.resources

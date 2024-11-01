@@ -54,10 +54,11 @@
             // loginControl1
             // 
             this.loginControl1.BackColor = System.Drawing.Color.White;
-            this.loginControl1.Location = new System.Drawing.Point(33, 39);
+            this.loginControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginControl1.Location = new System.Drawing.Point(0, 0);
             this.loginControl1.Name = "loginControl1";
             this.loginControl1.Password = null;
-            this.loginControl1.Size = new System.Drawing.Size(733, 301);
+            this.loginControl1.Size = new System.Drawing.Size(750, 303);
             this.loginControl1.TabIndex = 0;
             this.loginControl1.Username = null;
             this.loginControl1.SubmitClicked += new MyControls.LoginControl.SubmitClickedHandler(this.loginControl1_SubmitClicked);
@@ -68,7 +69,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(806, 373);
+            this.ClientSize = new System.Drawing.Size(750, 303);
             this.Controls.Add(this.loginControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

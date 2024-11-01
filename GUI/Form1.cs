@@ -63,11 +63,20 @@ namespace GUI
                 }
                 else
                 {
-                    KryptonMessageBox.Show("Đăng nhập thành công, vai trò của bạn là: " + employee.Role.RoleName, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //KryptonMessageBox.Show("Đăng nhập thành công, vai trò của bạn là: " + employee.Role.RoleName, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.loginControl1.resetText();
+                    this.Visible = false;
+                    MainForm mainForm = new MainForm(employee);
+                    mainForm.ExitEvent = new MainForm.Exit(this.Exit);
+                    mainForm.ShowDialog();
                     return;
                 }
             }
+        }
+
+        public void Exit()
+        {
+            this.Visible = true;
         }
     }
 }

@@ -47,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +58,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmployeeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeControl.Designer.cs">
+      <DependentUpon>EmployeeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeesControl.Designer.cs">
+      <DependentUpon>EmployeesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FieldControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FieldControl.Designer.cs">
+      <DependentUpon>FieldControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FieldsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FieldsControl.Designer.cs">
+      <DependentUpon>FieldsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -72,6 +97,18 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EmployeeControl.resx">
+      <DependentUpon>EmployeeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeesControl.resx">
+      <DependentUpon>EmployeesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldControl.resx">
+      <DependentUpon>FieldControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldsControl.resx">
+      <DependentUpon>FieldsControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginControl.resx">
       <DependentUpon>LoginControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +120,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\game %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LINQ\LINQ.csproj">
+      <Project>{8db9f02d-4b42-4dab-ac7b-4a34e730c880}</Project>
+      <Name>LINQ</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tennis-court.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pitch1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tennis-court1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ping-pong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

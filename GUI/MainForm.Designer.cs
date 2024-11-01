@@ -28,13 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.quảnLíSânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bóngĐáToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cầuLôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,10 +39,14 @@
             this.quảnLíNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.timer1 = new System.Windows.Forms.Timer();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -71,11 +70,86 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // quảnLíSânToolStripMenuItem
+            // 
+            this.quảnLíSânToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bóngĐáToolStripMenuItem,
+            this.cầuLôngToolStripMenuItem,
+            this.tennisToolStripMenuItem,
+            this.bóngBànToolStripMenuItem});
+            this.quảnLíSânToolStripMenuItem.Image = global::GUI.Properties.Resources.clipboard;
+            this.quảnLíSânToolStripMenuItem.Name = "quảnLíSânToolStripMenuItem";
+            this.quảnLíSânToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
+            this.quảnLíSânToolStripMenuItem.Text = "Quản lí sân";
+            // 
+            // bóngĐáToolStripMenuItem
+            // 
+            this.bóngĐáToolStripMenuItem.Image = global::GUI.Properties.Resources.football_field;
+            this.bóngĐáToolStripMenuItem.Name = "bóngĐáToolStripMenuItem";
+            this.bóngĐáToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.bóngĐáToolStripMenuItem.Text = "Bóng đá";
+            this.bóngĐáToolStripMenuItem.Click += new System.EventHandler(this.bóngĐáToolStripMenuItem_Click);
+            // 
+            // cầuLôngToolStripMenuItem
+            // 
+            this.cầuLôngToolStripMenuItem.Image = global::GUI.Properties.Resources.sport;
+            this.cầuLôngToolStripMenuItem.Name = "cầuLôngToolStripMenuItem";
+            this.cầuLôngToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.cầuLôngToolStripMenuItem.Text = "Cầu lông";
+            this.cầuLôngToolStripMenuItem.Click += new System.EventHandler(this.cầuLôngToolStripMenuItem_Click);
+            // 
+            // tennisToolStripMenuItem
+            // 
+            this.tennisToolStripMenuItem.Image = global::GUI.Properties.Resources.court;
+            this.tennisToolStripMenuItem.Name = "tennisToolStripMenuItem";
+            this.tennisToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.tennisToolStripMenuItem.Text = "Tennis";
+            this.tennisToolStripMenuItem.Click += new System.EventHandler(this.tennisToolStripMenuItem_Click);
+            // 
+            // bóngBànToolStripMenuItem
+            // 
+            this.bóngBànToolStripMenuItem.Image = global::GUI.Properties.Resources.table_tennis;
+            this.bóngBànToolStripMenuItem.Name = "bóngBànToolStripMenuItem";
+            this.bóngBànToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.bóngBànToolStripMenuItem.Text = "Bóng bàn";
+            this.bóngBànToolStripMenuItem.Click += new System.EventHandler(this.bóngBànToolStripMenuItem_Click);
+            // 
+            // thốngKêToolStripMenuItem
+            // 
+            this.thốngKêToolStripMenuItem.Image = global::GUI.Properties.Resources.dashboard;
+            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            // 
+            // quảnLíNhânViênToolStripMenuItem
+            // 
+            this.quảnLíNhânViênToolStripMenuItem.Image = global::GUI.Properties.Resources.employee;
+            this.quảnLíNhânViênToolStripMenuItem.Name = "quảnLíNhânViênToolStripMenuItem";
+            this.quảnLíNhânViênToolStripMenuItem.Size = new System.Drawing.Size(157, 24);
+            this.quảnLíNhânViênToolStripMenuItem.Text = "Quản lí nhân viên";
+            this.quảnLíNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLíNhânViênToolStripMenuItem_Click);
+            // 
+            // tàiKhoảnToolStripMenuItem
+            // 
+            this.tàiKhoảnToolStripMenuItem.Image = global::GUI.Properties.Resources.profile;
+            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
+            this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
+            // 
+            // đăngXuấtToolStripMenuItem
+            // 
+            this.đăngXuấtToolStripMenuItem.Image = global::GUI.Properties.Resources.check_out;
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
+            // 
             // kryptonPalette1
             // 
             this.kryptonPalette1.ButtonSpecs.FormClose.Image = global::GUI.Properties.Resources.round;
             this.kryptonPalette1.ButtonSpecs.FormMax.Image = global::GUI.Properties.Resources.circle;
             this.kryptonPalette1.ButtonSpecs.FormMin.Image = global::GUI.Properties.Resources.round__1_;
+            this.kryptonPalette1.ButtonSpecs.FormRestore.Image = global::GUI.Properties.Resources.circle;
             this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -121,74 +195,21 @@
             this.kryptonPanel2.Size = new System.Drawing.Size(1576, 36);
             this.kryptonPanel2.TabIndex = 1;
             // 
-            // quảnLíSânToolStripMenuItem
+            // kryptonLabel3
             // 
-            this.quảnLíSânToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bóngĐáToolStripMenuItem,
-            this.cầuLôngToolStripMenuItem,
-            this.tennisToolStripMenuItem,
-            this.bóngBànToolStripMenuItem});
-            this.quảnLíSânToolStripMenuItem.Image = global::GUI.Properties.Resources.clipboard;
-            this.quảnLíSânToolStripMenuItem.Name = "quảnLíSânToolStripMenuItem";
-            this.quảnLíSânToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
-            this.quảnLíSânToolStripMenuItem.Text = "Quản lí sân";
+            this.kryptonLabel3.Location = new System.Drawing.Point(215, 9);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(109, 24);
+            this.kryptonLabel3.TabIndex = 2;
+            this.kryptonLabel3.Values.Text = "kryptonLabel3";
             // 
-            // bóngĐáToolStripMenuItem
+            // kryptonLabel2
             // 
-            this.bóngĐáToolStripMenuItem.Image = global::GUI.Properties.Resources.football_field;
-            this.bóngĐáToolStripMenuItem.Name = "bóngĐáToolStripMenuItem";
-            this.bóngĐáToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
-            this.bóngĐáToolStripMenuItem.Text = "Bóng đá";
-            // 
-            // cầuLôngToolStripMenuItem
-            // 
-            this.cầuLôngToolStripMenuItem.Image = global::GUI.Properties.Resources.sport;
-            this.cầuLôngToolStripMenuItem.Name = "cầuLôngToolStripMenuItem";
-            this.cầuLôngToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
-            this.cầuLôngToolStripMenuItem.Text = "Cầu lông";
-            // 
-            // tennisToolStripMenuItem
-            // 
-            this.tennisToolStripMenuItem.Image = global::GUI.Properties.Resources.court;
-            this.tennisToolStripMenuItem.Name = "tennisToolStripMenuItem";
-            this.tennisToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
-            this.tennisToolStripMenuItem.Text = "Tennis";
-            // 
-            // bóngBànToolStripMenuItem
-            // 
-            this.bóngBànToolStripMenuItem.Image = global::GUI.Properties.Resources.table_tennis;
-            this.bóngBànToolStripMenuItem.Name = "bóngBànToolStripMenuItem";
-            this.bóngBànToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
-            this.bóngBànToolStripMenuItem.Text = "Bóng bàn";
-            // 
-            // thốngKêToolStripMenuItem
-            // 
-            this.thốngKêToolStripMenuItem.Image = global::GUI.Properties.Resources.dashboard;
-            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
-            this.thốngKêToolStripMenuItem.Text = "Thống kê";
-            // 
-            // quảnLíNhânViênToolStripMenuItem
-            // 
-            this.quảnLíNhânViênToolStripMenuItem.Image = global::GUI.Properties.Resources.employee;
-            this.quảnLíNhânViênToolStripMenuItem.Name = "quảnLíNhânViênToolStripMenuItem";
-            this.quảnLíNhânViênToolStripMenuItem.Size = new System.Drawing.Size(157, 24);
-            this.quảnLíNhânViênToolStripMenuItem.Text = "Quản lí nhân viên";
-            // 
-            // tàiKhoảnToolStripMenuItem
-            // 
-            this.tàiKhoảnToolStripMenuItem.Image = global::GUI.Properties.Resources.profile;
-            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
-            this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
-            // 
-            // đăngXuấtToolStripMenuItem
-            // 
-            this.đăngXuấtToolStripMenuItem.Image = global::GUI.Properties.Resources.check_out;
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
-            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
+            this.kryptonLabel2.Location = new System.Drawing.Point(1422, 9);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(109, 24);
+            this.kryptonLabel2.TabIndex = 1;
+            this.kryptonLabel2.Values.Text = "kryptonLabel2";
             // 
             // kryptonLabel1
             // 
@@ -202,22 +223,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // kryptonLabel2
-            // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(1422, 9);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(109, 24);
-            this.kryptonLabel2.TabIndex = 1;
-            this.kryptonLabel2.Values.Text = "kryptonLabel2";
-            // 
-            // kryptonLabel3
-            // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(215, 9);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(109, 24);
-            this.kryptonLabel3.TabIndex = 2;
-            this.kryptonLabel3.Values.Text = "kryptonLabel3";
             // 
             // MainForm
             // 
