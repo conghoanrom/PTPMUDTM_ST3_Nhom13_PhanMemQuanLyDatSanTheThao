@@ -98,49 +98,75 @@ namespace GUI
             this.Close();
         }
 
+        private void openFieldsControl(Control control)
+        {
+            control.Dock = DockStyle.Fill;
+            kryptonPanel1.Controls.Clear();
+            kryptonPanel1.Controls.Add(control);
+        }
+
         private void bóngĐáToolStripMenuItem_Click(object sender, EventArgs e)
         {
             List<Field> fields = db.Fields.Where(f => f.FieldType.TypeId == 1 || f.FieldType.TypeId == 2).ToList();
             FieldsControl fieldsControl = new FieldsControl(fields);
-            fieldsControl.Dock = DockStyle.Fill;
-            kryptonPanel1.Controls.Clear();
-            kryptonPanel1.Controls.Add(fieldsControl);
+            fieldsControl.openBookingFormEvent = new FieldsControl.openBookingForm(openBookingFormEvent);
+            fieldsControl.openFixedBookingFormEvent = new FieldsControl.openFixedBookingForm(openFixedBookingFormEvent);
+            openFieldsControl(fieldsControl);
         }
 
         private void cầuLôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             List<Field> fields = db.Fields.Where(f => f.FieldType.TypeId == 3).ToList();
             FieldsControl fieldsControl = new FieldsControl(fields);
-            fieldsControl.Dock = DockStyle.Fill;
-            kryptonPanel1.Controls.Clear();
-            kryptonPanel1.Controls.Add(fieldsControl);
+            fieldsControl.openBookingFormEvent = new FieldsControl.openBookingForm(openBookingFormEvent);
+            fieldsControl.openFixedBookingFormEvent = new FieldsControl.openFixedBookingForm(openFixedBookingFormEvent);
+            openFieldsControl(fieldsControl);
         }
 
         private void tennisToolStripMenuItem_Click(object sender, EventArgs e)
         {
             List<Field> fields = db.Fields.Where(f => f.FieldType.TypeId == 4).ToList();
             FieldsControl fieldsControl = new FieldsControl(fields);
-            fieldsControl.Dock = DockStyle.Fill;
-            kryptonPanel1.Controls.Clear();
-            kryptonPanel1.Controls.Add(fieldsControl);
+            fieldsControl.openBookingFormEvent = new FieldsControl.openBookingForm(openBookingFormEvent);
+            fieldsControl.openFixedBookingFormEvent = new FieldsControl.openFixedBookingForm(openFixedBookingFormEvent);
+            openFieldsControl(fieldsControl);
         }
 
         private void bóngBànToolStripMenuItem_Click(object sender, EventArgs e)
         {
             List<Field> fields = db.Fields.Where(f => f.FieldType.TypeId == 5).ToList();
             FieldsControl fieldsControl = new FieldsControl(fields);
-            fieldsControl.Dock = DockStyle.Fill;
-            kryptonPanel1.Controls.Clear();
-            kryptonPanel1.Controls.Add(fieldsControl);
+            fieldsControl.openBookingFormEvent = new FieldsControl.openBookingForm(openBookingFormEvent);
+            fieldsControl.openFixedBookingFormEvent = new FieldsControl.openFixedBookingForm(openFixedBookingFormEvent);
+            openFieldsControl(fieldsControl);
         }
 
-        private void quảnLíNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        public void openBookingFormEvent(int fieldId, string fieldName)
+        {
+            BookingForm bookingForm = new BookingForm(fieldId, fieldName, employee.EmployeeId);
+            bookingForm.ShowDialog();
+        }
+        public void openFixedBookingFormEvent(int fieldId)
+        {
+            FixedBookingForm fixedBookingForm = new FixedBookingForm(fieldId, employee.EmployeeId);
+            fixedBookingForm.ShowDialog();
+        }
+
+        private void mãGiảmGiáToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             List<Employee> employees = db.Employees.Where(emp => emp.Username != this.employee.Username).ToList();
             EmployeesControl employeesControl = new EmployeesControl(employees);
-            employeesControl.Dock = DockStyle.Fill;
-            kryptonPanel1.Controls.Clear();
-            kryptonPanel1.Controls.Add(employeesControl);
+            openFieldsControl(employeesControl);
+        }
+
+        private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

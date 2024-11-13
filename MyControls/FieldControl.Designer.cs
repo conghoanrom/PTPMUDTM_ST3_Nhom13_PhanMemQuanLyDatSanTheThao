@@ -34,6 +34,7 @@
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -74,6 +75,7 @@
             this.tableLayoutPanel2.Controls.Add(this.kryptonLabel3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.kryptonLabel2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.kryptonLabel1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.kryptonButton1, 0, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(267, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -113,6 +115,16 @@
             this.kryptonLabel1.TabIndex = 2;
             this.kryptonLabel1.Values.Text = "Sân 1";
             // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonButton1.Location = new System.Drawing.Point(3, 150);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(253, 43);
+            this.kryptonButton1.TabIndex = 5;
+            this.kryptonButton1.Values.Text = "Xem danh sách đặt";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            // 
             // FieldControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -137,5 +149,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }

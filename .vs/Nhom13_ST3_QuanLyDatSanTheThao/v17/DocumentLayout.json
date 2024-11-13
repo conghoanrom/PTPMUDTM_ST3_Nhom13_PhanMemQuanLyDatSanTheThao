@@ -1,42 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\",
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\mycontrols\\employeescontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\employeescontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|c:\\users\\admin\\documents\\me\\learn.net\\nhom13_st3_quanlydatsanthethao\\mycontrols\\logincontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\logincontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\mycontrols\\fieldscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\fieldscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\mycontrols\\fieldcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\fieldcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\mycontrols\\employeecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\employeecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\mycontrols\\employeescontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\employeescontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\mycontrols\\employeecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\employeecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\mycontrols\\employeescontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\employeescontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,112 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\LoginControl.cs",
-              "RelativeDocumentMoniker": "MyControls\\LoginControl.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\LoginControl.cs [Design]",
-              "RelativeToolTip": "MyControls\\LoginControl.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs",
+              "RelativeDocumentMoniker": "GUI\\MainForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs [Design]",
+              "RelativeToolTip": "GUI\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T00:57:11.158Z",
+              "WhenOpened": "2024-11-13T05:56:09.342Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FieldControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\FieldControl.cs",
-              "RelativeDocumentMoniker": "MyControls\\FieldControl.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\FieldControl.cs [Design]",
-              "RelativeToolTip": "MyControls\\FieldControl.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs",
+              "RelativeDocumentMoniker": "GUI\\MainForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs",
+              "RelativeToolTip": "GUI\\MainForm.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAQwI0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T00:57:04.752Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmployeeControl.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\EmployeeControl.cs",
-              "RelativeDocumentMoniker": "MyControls\\EmployeeControl.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\EmployeeControl.cs",
-              "RelativeToolTip": "MyControls\\EmployeeControl.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAawA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T12:34:36.381Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmployeeControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\EmployeeControl.cs",
-              "RelativeDocumentMoniker": "MyControls\\EmployeeControl.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\EmployeeControl.cs [Design]",
-              "RelativeToolTip": "MyControls\\EmployeeControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T12:19:49.365Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EmployeesControl.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\EmployeesControl.cs",
-              "RelativeDocumentMoniker": "MyControls\\EmployeesControl.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\EmployeesControl.cs",
-              "RelativeToolTip": "MyControls\\EmployeesControl.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAC0AAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T12:06:35.666Z",
+              "WhenOpened": "2024-11-13T05:53:30.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FieldsControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\FieldsControl.cs",
-              "RelativeDocumentMoniker": "MyControls\\FieldsControl.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\FieldsControl.cs [Design]",
-              "RelativeToolTip": "MyControls\\FieldsControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T12:03:09.851Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "EmployeesControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\EmployeesControl.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\EmployeesControl.cs",
               "RelativeDocumentMoniker": "MyControls\\EmployeesControl.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\EmployeesControl.cs [Design]",
+              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\EmployeesControl.cs [Design]",
               "RelativeToolTip": "MyControls\\EmployeesControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T12:03:03.886Z",
+              "WhenOpened": "2024-11-13T05:48:24.509Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs",
-              "RelativeDocumentMoniker": "GUI\\MainForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs [Design]",
-              "RelativeToolTip": "GUI\\MainForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T11:02:25.66Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs",
-              "RelativeDocumentMoniker": "GUI\\MainForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Documents\\Me\\Learn.NET\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs",
-              "RelativeToolTip": "GUI\\MainForm.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAIwIsAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T11:02:23.311Z"
             }
           ]
         }

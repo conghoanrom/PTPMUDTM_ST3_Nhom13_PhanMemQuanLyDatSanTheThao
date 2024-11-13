@@ -33,9 +33,6 @@ namespace LINQ
     partial void InsertCasualBooking(CasualBooking instance);
     partial void UpdateCasualBooking(CasualBooking instance);
     partial void DeleteCasualBooking(CasualBooking instance);
-    partial void InsertCustomer(Customer instance);
-    partial void UpdateCustomer(Customer instance);
-    partial void DeleteCustomer(Customer instance);
     partial void InsertDiscountService(DiscountService instance);
     partial void UpdateDiscountService(DiscountService instance);
     partial void DeleteDiscountService(DiscountService instance);
@@ -48,12 +45,6 @@ namespace LINQ
     partial void InsertFieldType(FieldType instance);
     partial void UpdateFieldType(FieldType instance);
     partial void DeleteFieldType(FieldType instance);
-    partial void InsertFixedBooking(FixedBooking instance);
-    partial void UpdateFixedBooking(FixedBooking instance);
-    partial void DeleteFixedBooking(FixedBooking instance);
-    partial void InsertFixedSchedule(FixedSchedule instance);
-    partial void UpdateFixedSchedule(FixedSchedule instance);
-    partial void DeleteFixedSchedule(FixedSchedule instance);
     partial void InsertRole(Role instance);
     partial void UpdateRole(Role instance);
     partial void DeleteRole(Role instance);
@@ -103,14 +94,6 @@ namespace LINQ
 			}
 		}
 		
-		public System.Data.Linq.Table<Customer> Customers
-		{
-			get
-			{
-				return this.GetTable<Customer>();
-			}
-		}
-		
 		public System.Data.Linq.Table<DiscountService> DiscountServices
 		{
 			get
@@ -140,22 +123,6 @@ namespace LINQ
 			get
 			{
 				return this.GetTable<FieldType>();
-			}
-		}
-		
-		public System.Data.Linq.Table<FixedBooking> FixedBookings
-		{
-			get
-			{
-				return this.GetTable<FixedBooking>();
-			}
-		}
-		
-		public System.Data.Linq.Table<FixedSchedule> FixedSchedules
-		{
-			get
-			{
-				return this.GetTable<FixedSchedule>();
 			}
 		}
 		
@@ -609,168 +576,6 @@ namespace LINQ
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Customers")]
-	public partial class Customer : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _CustomerId;
-		
-		private string _FullName;
-		
-		private string _Phone;
-		
-		private string _Email;
-		
-		private EntitySet<FixedBooking> _FixedBookings;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnCustomerIdChanging(string value);
-    partial void OnCustomerIdChanged();
-    partial void OnFullNameChanging(string value);
-    partial void OnFullNameChanged();
-    partial void OnPhoneChanging(string value);
-    partial void OnPhoneChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    #endregion
-		
-		public Customer()
-		{
-			this._FixedBookings = new EntitySet<FixedBooking>(new Action<FixedBooking>(this.attach_FixedBookings), new Action<FixedBooking>(this.detach_FixedBookings));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerId", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string CustomerId
-		{
-			get
-			{
-				return this._CustomerId;
-			}
-			set
-			{
-				if ((this._CustomerId != value))
-				{
-					this.OnCustomerIdChanging(value);
-					this.SendPropertyChanging();
-					this._CustomerId = value;
-					this.SendPropertyChanged("CustomerId");
-					this.OnCustomerIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullName", DbType="NVarChar(50)")]
-		public string FullName
-		{
-			get
-			{
-				return this._FullName;
-			}
-			set
-			{
-				if ((this._FullName != value))
-				{
-					this.OnFullNameChanging(value);
-					this.SendPropertyChanging();
-					this._FullName = value;
-					this.SendPropertyChanged("FullName");
-					this.OnFullNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="VarChar(11)")]
-		public string Phone
-		{
-			get
-			{
-				return this._Phone;
-			}
-			set
-			{
-				if ((this._Phone != value))
-				{
-					this.OnPhoneChanging(value);
-					this.SendPropertyChanging();
-					this._Phone = value;
-					this.SendPropertyChanged("Phone");
-					this.OnPhoneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(100)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer_FixedBooking", Storage="_FixedBookings", ThisKey="CustomerId", OtherKey="CustomerId")]
-		public EntitySet<FixedBooking> FixedBookings
-		{
-			get
-			{
-				return this._FixedBookings;
-			}
-			set
-			{
-				this._FixedBookings.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_FixedBookings(FixedBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.Customer = this;
-		}
-		
-		private void detach_FixedBookings(FixedBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.Customer = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DiscountServices")]
 	public partial class DiscountService : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -788,8 +593,6 @@ namespace LINQ
 		private System.Nullable<int> _Discount;
 		
 		private EntitySet<CasualBooking> _CasualBookings;
-		
-		private EntitySet<FixedBooking> _FixedBookings;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -810,7 +613,6 @@ namespace LINQ
 		public DiscountService()
 		{
 			this._CasualBookings = new EntitySet<CasualBooking>(new Action<CasualBooking>(this.attach_CasualBookings), new Action<CasualBooking>(this.detach_CasualBookings));
-			this._FixedBookings = new EntitySet<FixedBooking>(new Action<FixedBooking>(this.attach_FixedBookings), new Action<FixedBooking>(this.detach_FixedBookings));
 			OnCreated();
 		}
 		
@@ -927,19 +729,6 @@ namespace LINQ
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DiscountService_FixedBooking", Storage="_FixedBookings", ThisKey="ServiceId", OtherKey="ServiceId")]
-		public EntitySet<FixedBooking> FixedBookings
-		{
-			get
-			{
-				return this._FixedBookings;
-			}
-			set
-			{
-				this._FixedBookings.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -971,18 +760,6 @@ namespace LINQ
 			this.SendPropertyChanging();
 			entity.DiscountService = null;
 		}
-		
-		private void attach_FixedBookings(FixedBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.DiscountService = this;
-		}
-		
-		private void detach_FixedBookings(FixedBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.DiscountService = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employees")]
@@ -1008,8 +785,6 @@ namespace LINQ
 		private string _RoleId;
 		
 		private EntitySet<CasualBooking> _CasualBookings;
-		
-		private EntitySet<FixedBooking> _FixedBookings;
 		
 		private EntityRef<SalaryPayment> _SalaryPayment;
 		
@@ -1042,7 +817,6 @@ namespace LINQ
 		public Employee()
 		{
 			this._CasualBookings = new EntitySet<CasualBooking>(new Action<CasualBooking>(this.attach_CasualBookings), new Action<CasualBooking>(this.detach_CasualBookings));
-			this._FixedBookings = new EntitySet<FixedBooking>(new Action<FixedBooking>(this.attach_FixedBookings), new Action<FixedBooking>(this.detach_FixedBookings));
 			this._SalaryPayment = default(EntityRef<SalaryPayment>);
 			this._TimeKeeping = default(EntityRef<TimeKeeping>);
 			this._Role = default(EntityRef<Role>);
@@ -1226,19 +1000,6 @@ namespace LINQ
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_FixedBooking", Storage="_FixedBookings", ThisKey="EmployeeId", OtherKey="EmployeeId")]
-		public EntitySet<FixedBooking> FixedBookings
-		{
-			get
-			{
-				return this._FixedBookings;
-			}
-			set
-			{
-				this._FixedBookings.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_SalaryPayment", Storage="_SalaryPayment", ThisKey="EmployeeId", OtherKey="EmployeeId", IsUnique=true, IsForeignKey=false)]
 		public SalaryPayment SalaryPayment
 		{
@@ -1362,18 +1123,6 @@ namespace LINQ
 			this.SendPropertyChanging();
 			entity.Employee = null;
 		}
-		
-		private void attach_FixedBookings(FixedBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee = this;
-		}
-		
-		private void detach_FixedBookings(FixedBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Fields")]
@@ -1391,8 +1140,6 @@ namespace LINQ
 		private System.Nullable<int> _TypeId;
 		
 		private EntitySet<CasualBooking> _CasualBookings;
-		
-		private EntitySet<FixedBooking> _FixedBookings;
 		
 		private EntityRef<FieldType> _FieldType;
 		
@@ -1413,7 +1160,6 @@ namespace LINQ
 		public Field()
 		{
 			this._CasualBookings = new EntitySet<CasualBooking>(new Action<CasualBooking>(this.attach_CasualBookings), new Action<CasualBooking>(this.detach_CasualBookings));
-			this._FixedBookings = new EntitySet<FixedBooking>(new Action<FixedBooking>(this.attach_FixedBookings), new Action<FixedBooking>(this.detach_FixedBookings));
 			this._FieldType = default(EntityRef<FieldType>);
 			OnCreated();
 		}
@@ -1515,19 +1261,6 @@ namespace LINQ
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Field_FixedBooking", Storage="_FixedBookings", ThisKey="FieldId", OtherKey="FieldId")]
-		public EntitySet<FixedBooking> FixedBookings
-		{
-			get
-			{
-				return this._FixedBookings;
-			}
-			set
-			{
-				this._FixedBookings.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FieldType_Field", Storage="_FieldType", ThisKey="TypeId", OtherKey="TypeId", IsForeignKey=true)]
 		public FieldType FieldType
 		{
@@ -1589,18 +1322,6 @@ namespace LINQ
 		}
 		
 		private void detach_CasualBookings(CasualBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.Field = null;
-		}
-		
-		private void attach_FixedBookings(FixedBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.Field = this;
-		}
-		
-		private void detach_FixedBookings(FixedBooking entity)
 		{
 			this.SendPropertyChanging();
 			entity.Field = null;
@@ -1766,603 +1487,6 @@ namespace LINQ
 		{
 			this.SendPropertyChanging();
 			entity.FieldType = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.FixedBookings")]
-	public partial class FixedBooking : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _FixedBookingId;
-		
-		private System.Nullable<System.DateTime> _BookingDate;
-		
-		private System.Nullable<int> _Months;
-		
-		private System.Nullable<int> _FieldId;
-		
-		private string _CustomerId;
-		
-		private string _EmployeeId;
-		
-		private System.Nullable<int> _ServiceId;
-		
-		private System.Nullable<int> _TotalPrice;
-		
-		private EntitySet<FixedSchedule> _FixedSchedules;
-		
-		private EntityRef<Customer> _Customer;
-		
-		private EntityRef<Employee> _Employee;
-		
-		private EntityRef<Field> _Field;
-		
-		private EntityRef<DiscountService> _DiscountService;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnFixedBookingIdChanging(string value);
-    partial void OnFixedBookingIdChanged();
-    partial void OnBookingDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnBookingDateChanged();
-    partial void OnMonthsChanging(System.Nullable<int> value);
-    partial void OnMonthsChanged();
-    partial void OnFieldIdChanging(System.Nullable<int> value);
-    partial void OnFieldIdChanged();
-    partial void OnCustomerIdChanging(string value);
-    partial void OnCustomerIdChanged();
-    partial void OnEmployeeIdChanging(string value);
-    partial void OnEmployeeIdChanged();
-    partial void OnServiceIdChanging(System.Nullable<int> value);
-    partial void OnServiceIdChanged();
-    partial void OnTotalPriceChanging(System.Nullable<int> value);
-    partial void OnTotalPriceChanged();
-    #endregion
-		
-		public FixedBooking()
-		{
-			this._FixedSchedules = new EntitySet<FixedSchedule>(new Action<FixedSchedule>(this.attach_FixedSchedules), new Action<FixedSchedule>(this.detach_FixedSchedules));
-			this._Customer = default(EntityRef<Customer>);
-			this._Employee = default(EntityRef<Employee>);
-			this._Field = default(EntityRef<Field>);
-			this._DiscountService = default(EntityRef<DiscountService>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FixedBookingId", DbType="VarChar(11) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string FixedBookingId
-		{
-			get
-			{
-				return this._FixedBookingId;
-			}
-			set
-			{
-				if ((this._FixedBookingId != value))
-				{
-					this.OnFixedBookingIdChanging(value);
-					this.SendPropertyChanging();
-					this._FixedBookingId = value;
-					this.SendPropertyChanged("FixedBookingId");
-					this.OnFixedBookingIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingDate", DbType="Date")]
-		public System.Nullable<System.DateTime> BookingDate
-		{
-			get
-			{
-				return this._BookingDate;
-			}
-			set
-			{
-				if ((this._BookingDate != value))
-				{
-					this.OnBookingDateChanging(value);
-					this.SendPropertyChanging();
-					this._BookingDate = value;
-					this.SendPropertyChanged("BookingDate");
-					this.OnBookingDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Months", DbType="Int")]
-		public System.Nullable<int> Months
-		{
-			get
-			{
-				return this._Months;
-			}
-			set
-			{
-				if ((this._Months != value))
-				{
-					this.OnMonthsChanging(value);
-					this.SendPropertyChanging();
-					this._Months = value;
-					this.SendPropertyChanged("Months");
-					this.OnMonthsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FieldId", DbType="Int")]
-		public System.Nullable<int> FieldId
-		{
-			get
-			{
-				return this._FieldId;
-			}
-			set
-			{
-				if ((this._FieldId != value))
-				{
-					if (this._Field.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnFieldIdChanging(value);
-					this.SendPropertyChanging();
-					this._FieldId = value;
-					this.SendPropertyChanged("FieldId");
-					this.OnFieldIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerId", DbType="VarChar(10)")]
-		public string CustomerId
-		{
-			get
-			{
-				return this._CustomerId;
-			}
-			set
-			{
-				if ((this._CustomerId != value))
-				{
-					if (this._Customer.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnCustomerIdChanging(value);
-					this.SendPropertyChanging();
-					this._CustomerId = value;
-					this.SendPropertyChanged("CustomerId");
-					this.OnCustomerIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeId", DbType="VarChar(5)")]
-		public string EmployeeId
-		{
-			get
-			{
-				return this._EmployeeId;
-			}
-			set
-			{
-				if ((this._EmployeeId != value))
-				{
-					if (this._Employee.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnEmployeeIdChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeeId = value;
-					this.SendPropertyChanged("EmployeeId");
-					this.OnEmployeeIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceId", DbType="Int")]
-		public System.Nullable<int> ServiceId
-		{
-			get
-			{
-				return this._ServiceId;
-			}
-			set
-			{
-				if ((this._ServiceId != value))
-				{
-					if (this._DiscountService.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnServiceIdChanging(value);
-					this.SendPropertyChanging();
-					this._ServiceId = value;
-					this.SendPropertyChanged("ServiceId");
-					this.OnServiceIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalPrice", DbType="Int")]
-		public System.Nullable<int> TotalPrice
-		{
-			get
-			{
-				return this._TotalPrice;
-			}
-			set
-			{
-				if ((this._TotalPrice != value))
-				{
-					this.OnTotalPriceChanging(value);
-					this.SendPropertyChanging();
-					this._TotalPrice = value;
-					this.SendPropertyChanged("TotalPrice");
-					this.OnTotalPriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FixedBooking_FixedSchedule", Storage="_FixedSchedules", ThisKey="FixedBookingId", OtherKey="FixedBookingId")]
-		public EntitySet<FixedSchedule> FixedSchedules
-		{
-			get
-			{
-				return this._FixedSchedules;
-			}
-			set
-			{
-				this._FixedSchedules.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer_FixedBooking", Storage="_Customer", ThisKey="CustomerId", OtherKey="CustomerId", IsForeignKey=true)]
-		public Customer Customer
-		{
-			get
-			{
-				return this._Customer.Entity;
-			}
-			set
-			{
-				Customer previousValue = this._Customer.Entity;
-				if (((previousValue != value) 
-							|| (this._Customer.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Customer.Entity = null;
-						previousValue.FixedBookings.Remove(this);
-					}
-					this._Customer.Entity = value;
-					if ((value != null))
-					{
-						value.FixedBookings.Add(this);
-						this._CustomerId = value.CustomerId;
-					}
-					else
-					{
-						this._CustomerId = default(string);
-					}
-					this.SendPropertyChanged("Customer");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_FixedBooking", Storage="_Employee", ThisKey="EmployeeId", OtherKey="EmployeeId", IsForeignKey=true)]
-		public Employee Employee
-		{
-			get
-			{
-				return this._Employee.Entity;
-			}
-			set
-			{
-				Employee previousValue = this._Employee.Entity;
-				if (((previousValue != value) 
-							|| (this._Employee.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Employee.Entity = null;
-						previousValue.FixedBookings.Remove(this);
-					}
-					this._Employee.Entity = value;
-					if ((value != null))
-					{
-						value.FixedBookings.Add(this);
-						this._EmployeeId = value.EmployeeId;
-					}
-					else
-					{
-						this._EmployeeId = default(string);
-					}
-					this.SendPropertyChanged("Employee");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Field_FixedBooking", Storage="_Field", ThisKey="FieldId", OtherKey="FieldId", IsForeignKey=true)]
-		public Field Field
-		{
-			get
-			{
-				return this._Field.Entity;
-			}
-			set
-			{
-				Field previousValue = this._Field.Entity;
-				if (((previousValue != value) 
-							|| (this._Field.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Field.Entity = null;
-						previousValue.FixedBookings.Remove(this);
-					}
-					this._Field.Entity = value;
-					if ((value != null))
-					{
-						value.FixedBookings.Add(this);
-						this._FieldId = value.FieldId;
-					}
-					else
-					{
-						this._FieldId = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Field");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DiscountService_FixedBooking", Storage="_DiscountService", ThisKey="ServiceId", OtherKey="ServiceId", IsForeignKey=true)]
-		public DiscountService DiscountService
-		{
-			get
-			{
-				return this._DiscountService.Entity;
-			}
-			set
-			{
-				DiscountService previousValue = this._DiscountService.Entity;
-				if (((previousValue != value) 
-							|| (this._DiscountService.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._DiscountService.Entity = null;
-						previousValue.FixedBookings.Remove(this);
-					}
-					this._DiscountService.Entity = value;
-					if ((value != null))
-					{
-						value.FixedBookings.Add(this);
-						this._ServiceId = value.ServiceId;
-					}
-					else
-					{
-						this._ServiceId = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("DiscountService");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_FixedSchedules(FixedSchedule entity)
-		{
-			this.SendPropertyChanging();
-			entity.FixedBooking = this;
-		}
-		
-		private void detach_FixedSchedules(FixedSchedule entity)
-		{
-			this.SendPropertyChanging();
-			entity.FixedBooking = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.FixedSchedules")]
-	public partial class FixedSchedule : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _DayOfTheWeek;
-		
-		private System.Nullable<System.TimeSpan> _StartTime;
-		
-		private System.Nullable<int> _Minutes;
-		
-		private string _FixedBookingId;
-		
-		private EntityRef<FixedBooking> _FixedBooking;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnDayOfTheWeekChanging(int value);
-    partial void OnDayOfTheWeekChanged();
-    partial void OnStartTimeChanging(System.Nullable<System.TimeSpan> value);
-    partial void OnStartTimeChanged();
-    partial void OnMinutesChanging(System.Nullable<int> value);
-    partial void OnMinutesChanged();
-    partial void OnFixedBookingIdChanging(string value);
-    partial void OnFixedBookingIdChanged();
-    #endregion
-		
-		public FixedSchedule()
-		{
-			this._FixedBooking = default(EntityRef<FixedBooking>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DayOfTheWeek", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int DayOfTheWeek
-		{
-			get
-			{
-				return this._DayOfTheWeek;
-			}
-			set
-			{
-				if ((this._DayOfTheWeek != value))
-				{
-					this.OnDayOfTheWeekChanging(value);
-					this.SendPropertyChanging();
-					this._DayOfTheWeek = value;
-					this.SendPropertyChanged("DayOfTheWeek");
-					this.OnDayOfTheWeekChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="Time")]
-		public System.Nullable<System.TimeSpan> StartTime
-		{
-			get
-			{
-				return this._StartTime;
-			}
-			set
-			{
-				if ((this._StartTime != value))
-				{
-					this.OnStartTimeChanging(value);
-					this.SendPropertyChanging();
-					this._StartTime = value;
-					this.SendPropertyChanged("StartTime");
-					this.OnStartTimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Minutes", DbType="Int")]
-		public System.Nullable<int> Minutes
-		{
-			get
-			{
-				return this._Minutes;
-			}
-			set
-			{
-				if ((this._Minutes != value))
-				{
-					this.OnMinutesChanging(value);
-					this.SendPropertyChanging();
-					this._Minutes = value;
-					this.SendPropertyChanged("Minutes");
-					this.OnMinutesChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FixedBookingId", DbType="VarChar(11) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string FixedBookingId
-		{
-			get
-			{
-				return this._FixedBookingId;
-			}
-			set
-			{
-				if ((this._FixedBookingId != value))
-				{
-					if (this._FixedBooking.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnFixedBookingIdChanging(value);
-					this.SendPropertyChanging();
-					this._FixedBookingId = value;
-					this.SendPropertyChanged("FixedBookingId");
-					this.OnFixedBookingIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FixedBooking_FixedSchedule", Storage="_FixedBooking", ThisKey="FixedBookingId", OtherKey="FixedBookingId", IsForeignKey=true)]
-		public FixedBooking FixedBooking
-		{
-			get
-			{
-				return this._FixedBooking.Entity;
-			}
-			set
-			{
-				FixedBooking previousValue = this._FixedBooking.Entity;
-				if (((previousValue != value) 
-							|| (this._FixedBooking.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._FixedBooking.Entity = null;
-						previousValue.FixedSchedules.Remove(this);
-					}
-					this._FixedBooking.Entity = value;
-					if ((value != null))
-					{
-						value.FixedSchedules.Add(this);
-						this._FixedBookingId = value.FixedBookingId;
-					}
-					else
-					{
-						this._FixedBookingId = default(string);
-					}
-					this.SendPropertyChanged("FixedBooking");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	

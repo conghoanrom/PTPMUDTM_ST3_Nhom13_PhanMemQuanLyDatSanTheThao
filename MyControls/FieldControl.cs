@@ -14,6 +14,11 @@ namespace MyControls
     public partial class FieldControl : UserControl
     {
         public Field Field { get; set; }
+
+        public delegate void getFieldId(int fieldId);
+        public getFieldId getFieldIdEvent;
+        private SportsFieldManagementContextDataContext db = new SportsFieldManagementContextDataContext();
+
         public FieldControl(Field field)
         {
             InitializeComponent();
@@ -25,6 +30,8 @@ namespace MyControls
 
             kryptonLabel1.Text = Field.FieldName;
             kryptonLabel2.Text = "Vị trí: " + Field.Location;
+            FieldType fieldType = db.FieldTypes.Where(f => f.TypeId == Field.TypeId).FirstOrDefault();
+            kryptonLabel3.Text = "Loại sân: " + fieldType.TypeName;
             setFieldImage();
         }
         private void setFieldImage()
@@ -44,6 +51,13 @@ namespace MyControls
             {
                 pictureBox1.Image = global::MyControls.Properties.Resources.ping_pong;
             }
+        }
+
+         
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            getFieldIdEvent(Field.FieldId);
         }
     }
 }
