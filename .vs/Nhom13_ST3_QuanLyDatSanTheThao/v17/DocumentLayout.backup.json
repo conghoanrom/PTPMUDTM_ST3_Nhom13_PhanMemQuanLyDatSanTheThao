@@ -1,26 +1,66 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\",
+  "WorkspaceRootPath": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\fixedbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\fixedbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\gui\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\fixedbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|d:\\udtm\\ptpmudtm_st3_nhom13_phanmemquanlydatsanthethao\\gui\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\mycontrols\\logincontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\logincontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|d:\\udtm\\ptpmudtm_st3_nhom13_phanmemquanlydatsanthethao\\mycontrols\\employeescontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\employeescontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|d:\\udtm\\ptpmudtm_st3_nhom13_phanmemquanlydatsanthethao\\mycontrols\\employeecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\employeecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|d:\\udtm\\ptpmudtm_st3_nhom13_phanmemquanlydatsanthethao\\mycontrols\\fieldcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\fieldcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|d:\\udtm\\ptpmudtm_st3_nhom13_phanmemquanlydatsanthethao\\mycontrols\\fieldscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\fieldscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|d:\\udtm\\ptpmudtm_st3_nhom13_phanmemquanlydatsanthethao\\gui\\fixedbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\fixedbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\bookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|d:\\udtm\\ptpmudtm_st3_nhom13_phanmemquanlydatsanthethao\\gui\\bookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\bookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\gui\\userform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\userform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\gui\\bookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\bookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\fixedbookingform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\fixedbookingform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\mycontrols\\fieldscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\fieldscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,70 +70,192 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FixedBookingForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\FixedBookingForm.Designer.cs",
-              "RelativeDocumentMoniker": "GUI\\FixedBookingForm.Designer.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\FixedBookingForm.Designer.cs",
-              "RelativeToolTip": "GUI\\FixedBookingForm.Designer.cs",
-              "ViewState": "AgIAAJoBAAAAAAAAAAAswH0BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T04:31:30.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookingForm.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\BookingForm.cs",
-              "RelativeDocumentMoniker": "GUI\\BookingForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\BookingForm.cs",
-              "RelativeToolTip": "GUI\\BookingForm.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAswFIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:56:16.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FixedBookingForm.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\FixedBookingForm.cs",
-              "RelativeDocumentMoniker": "GUI\\FixedBookingForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\FixedBookingForm.cs",
-              "RelativeToolTip": "GUI\\FixedBookingForm.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAAANMAAAAtAAAAAAAAAA==",
+              "Title": "UserForm.cs",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\UserForm.cs",
+              "RelativeDocumentMoniker": "GUI\\UserForm.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\UserForm.cs",
+              "RelativeToolTip": "GUI\\UserForm.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAwwJwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:31:37.17Z",
+              "WhenOpened": "2024-11-13T15:40:09.495Z",
+              "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeesControl.cs [Design]",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\MyControls\\EmployeesControl.cs",
+              "RelativeDocumentMoniker": "MyControls\\EmployeesControl.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\MyControls\\EmployeesControl.cs [Design]",
+              "RelativeToolTip": "MyControls\\EmployeesControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T10:54:31.581Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FixedBookingForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\FixedBookingForm.cs",
-              "RelativeDocumentMoniker": "GUI\\FixedBookingForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\FixedBookingForm.cs [Design]",
-              "RelativeToolTip": "GUI\\FixedBookingForm.cs [Design]",
+              "Title": "UserForm.cs [Design]",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\UserForm.cs",
+              "RelativeDocumentMoniker": "GUI\\UserForm.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\UserForm.cs [Design]",
+              "RelativeToolTip": "GUI\\UserForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:31:10.165Z",
+              "WhenOpened": "2024-11-14T08:41:55.855Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginControl.cs [Design]",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\MyControls\\LoginControl.cs",
+              "RelativeDocumentMoniker": "MyControls\\LoginControl.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\MyControls\\LoginControl.cs [Design]",
+              "RelativeToolTip": "MyControls\\LoginControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T10:49:36.444Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "FieldsControl.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\FieldsControl.cs",
-              "RelativeDocumentMoniker": "MyControls\\FieldsControl.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\FieldsControl.cs",
-              "RelativeToolTip": "MyControls\\FieldsControl.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAcwEMAAAAIAAAAAAAAAA==",
+              "Title": "EmployeeControl.cs [Design]",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\MyControls\\EmployeeControl.cs",
+              "RelativeDocumentMoniker": "MyControls\\EmployeeControl.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\MyControls\\EmployeeControl.cs [Design]",
+              "RelativeToolTip": "MyControls\\EmployeeControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:18:39.623Z",
+              "WhenOpened": "2024-11-14T10:54:29.422Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FieldControl.cs [Design]",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\MyControls\\FieldControl.cs",
+              "RelativeDocumentMoniker": "MyControls\\FieldControl.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\MyControls\\FieldControl.cs [Design]",
+              "RelativeToolTip": "MyControls\\FieldControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T10:54:24.414Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FieldsControl.cs [Design]",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\MyControls\\FieldsControl.cs",
+              "RelativeDocumentMoniker": "MyControls\\FieldsControl.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\MyControls\\FieldsControl.cs [Design]",
+              "RelativeToolTip": "MyControls\\FieldsControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T10:54:21.882Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FixedBookingForm.cs [Design]",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\FixedBookingForm.cs",
+              "RelativeDocumentMoniker": "GUI\\FixedBookingForm.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\FixedBookingForm.cs [Design]",
+              "RelativeToolTip": "GUI\\FixedBookingForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T10:54:13.451Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookingForm.cs [Design]",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\BookingForm.cs",
+              "RelativeDocumentMoniker": "GUI\\BookingForm.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\BookingForm.cs [Design]",
+              "RelativeToolTip": "GUI\\BookingForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T10:54:07.523Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\MainForm.cs",
+              "RelativeDocumentMoniker": "GUI\\MainForm.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\MainForm.cs [Design]",
+              "RelativeToolTip": "GUI\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T09:55:08.415Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\Form1.cs",
+              "RelativeDocumentMoniker": "GUI\\Form1.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\Form1.cs [Design]",
+              "RelativeToolTip": "GUI\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T09:55:06.147Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserForm.Designer.cs",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\UserForm.Designer.cs",
+              "RelativeDocumentMoniker": "GUI\\UserForm.Designer.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\UserForm.Designer.cs",
+              "RelativeToolTip": "GUI\\UserForm.Designer.cs",
+              "ViewState": "AgIAAAQBAAAAAAAAAAAWwBMBAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T09:42:40.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BookingForm.cs",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\BookingForm.cs",
+              "RelativeDocumentMoniker": "GUI\\BookingForm.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\BookingForm.cs",
+              "RelativeToolTip": "GUI\\BookingForm.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T08:32:49.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\Form1.cs",
+              "RelativeDocumentMoniker": "GUI\\Form1.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\Form1.cs",
+              "RelativeToolTip": "GUI\\Form1.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAiwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:41:14.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\MainForm.cs",
+              "RelativeDocumentMoniker": "GUI\\MainForm.cs",
+              "ToolTip": "D:\\UDTM\\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\\GUI\\MainForm.cs",
+              "RelativeToolTip": "GUI\\MainForm.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAYwFsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:51:17.837Z",
               "EditorCaption": ""
             }
           ]

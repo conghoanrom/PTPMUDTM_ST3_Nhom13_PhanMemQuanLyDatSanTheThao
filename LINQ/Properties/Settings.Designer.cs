@@ -33,5 +33,16 @@ namespace LINQ.Properties {
                 return ((string)(this["DBSPORTSFIELDBOOKINGConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ACER\\SQLEXPRESS;Initial Catalog=DBSPORTSFIELDBOOKING;Integrated Secur" +
+            "ity=True;TrustServerCertificate=True")]
+        public string DBSPORTSFIELDBOOKINGConnectionString1 {
+            get {
+                return ((string)(this["DBSPORTSFIELDBOOKINGConnectionString1"]));
+            }
+        }
     }
 }

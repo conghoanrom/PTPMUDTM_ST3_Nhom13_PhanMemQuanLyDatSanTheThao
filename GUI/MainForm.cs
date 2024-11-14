@@ -41,8 +41,8 @@ namespace GUI
             timeElapsed = TimeSpan.Zero;
             timer1.Start();
 
-            thốngKêToolStripMenuItem.Enabled = this.employee.RoleId.Equals("MANAGER");
-            quảnLíNhânViênToolStripMenuItem.Enabled = this.employee.RoleId.Equals("MANAGER");
+            //thốngKêToolStripMenuItem.Enabled = this.employee.RoleId.Equals("MANAGER");
+            //quảnLíNhânViênToolStripMenuItem.Enabled = this.employee.RoleId.Equals("MANAGER");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -100,8 +100,8 @@ namespace GUI
 
         private void openFieldsControl(Control control)
         {
-            control.Dock = DockStyle.Fill;
-            kryptonPanel1.Controls.Clear();
+            control.Dock = DockStyle.Fill; 
+            kryptonPanel1.Controls.Clear(); 
             kryptonPanel1.Controls.Add(control);
         }
 
@@ -167,6 +167,12 @@ namespace GUI
         private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserForm userForm = new UserForm(this.employee);
+            userForm.ShowDialog();
         }
     }
 }

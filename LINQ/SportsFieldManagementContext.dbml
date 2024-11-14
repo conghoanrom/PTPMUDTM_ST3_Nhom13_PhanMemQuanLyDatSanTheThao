@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBSPORTSFIELDBOOKING" Class="SportsFieldManagementContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=MSI;Initial Catalog=DBSPORTSFIELDBOOKING;User ID=sa;Encrypt=False" SettingsObjectName="LINQ.Properties.Settings" SettingsPropertyName="DBSPORTSFIELDBOOKINGConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ACER\SQLEXPRESS;Initial Catalog=DBSPORTSFIELDBOOKING;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="LINQ.Properties.Settings" SettingsPropertyName="DBSPORTSFIELDBOOKINGConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CasualBookings" Member="CasualBookings">
     <Type Name="CasualBooking">
       <Column Name="BookingId" Type="System.String" DbType="VarChar(11) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -16,6 +16,14 @@
       <Association Name="DiscountService_CasualBooking" Member="DiscountService" ThisKey="ServiceId" OtherKey="ServiceId" Type="DiscountService" IsForeignKey="true" />
       <Association Name="Employee_CasualBooking" Member="Employee" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="Employee" IsForeignKey="true" />
       <Association Name="Field_CasualBooking" Member="Field" ThisKey="FieldId" OtherKey="FieldId" Type="Field" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TimeKeepings" Member="TimeKeepings">
+    <Type Name="TimeKeeping">
+      <Column Name="EmployeeId" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DayWorking" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HOURS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Employee_TimeKeeping" Member="Employee" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="Employee" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DiscountServices" Member="DiscountServices">
@@ -39,8 +47,8 @@
       <Column Name="Password" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="RoleId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Association Name="Employee_CasualBooking" Member="CasualBookings" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="CasualBooking" />
-      <Association Name="Employee_SalaryPayment" Member="SalaryPayment" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="SalaryPayment" Cardinality="One" />
       <Association Name="Employee_TimeKeeping" Member="TimeKeeping" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="TimeKeeping" Cardinality="One" />
+      <Association Name="Employee_SalaryPayment" Member="SalaryPayment" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="SalaryPayment" Cardinality="One" />
       <Association Name="Role_Employee" Member="Role" ThisKey="RoleId" OtherKey="RoleId" Type="Role" IsForeignKey="true" />
     </Type>
   </Table>
@@ -77,14 +85,6 @@
       <Column Name="Status" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="SALARY" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Employee_SalaryPayment" Member="Employee" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="Employee" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TimeKeepings" Member="TimeKeepings">
-    <Type Name="TimeKeeping">
-      <Column Name="EmployeeId" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="DayWorking" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="HOURS" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Employee_TimeKeeping" Member="Employee" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="Employee" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

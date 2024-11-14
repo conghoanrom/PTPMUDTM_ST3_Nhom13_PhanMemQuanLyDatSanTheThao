@@ -33,6 +33,9 @@ namespace LINQ
     partial void InsertCasualBooking(CasualBooking instance);
     partial void UpdateCasualBooking(CasualBooking instance);
     partial void DeleteCasualBooking(CasualBooking instance);
+    partial void InsertTimeKeeping(TimeKeeping instance);
+    partial void UpdateTimeKeeping(TimeKeeping instance);
+    partial void DeleteTimeKeeping(TimeKeeping instance);
     partial void InsertDiscountService(DiscountService instance);
     partial void UpdateDiscountService(DiscountService instance);
     partial void DeleteDiscountService(DiscountService instance);
@@ -51,13 +54,10 @@ namespace LINQ
     partial void InsertSalaryPayment(SalaryPayment instance);
     partial void UpdateSalaryPayment(SalaryPayment instance);
     partial void DeleteSalaryPayment(SalaryPayment instance);
-    partial void InsertTimeKeeping(TimeKeeping instance);
-    partial void UpdateTimeKeeping(TimeKeeping instance);
-    partial void DeleteTimeKeeping(TimeKeeping instance);
     #endregion
 		
 		public SportsFieldManagementContextDataContext() : 
-				base(global::LINQ.Properties.Settings.Default.DBSPORTSFIELDBOOKINGConnectionString, mappingSource)
+				base(global::LINQ.Properties.Settings.Default.DBSPORTSFIELDBOOKINGConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -91,6 +91,14 @@ namespace LINQ
 			get
 			{
 				return this.GetTable<CasualBooking>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TimeKeeping> TimeKeepings
+		{
+			get
+			{
+				return this.GetTable<TimeKeeping>();
 			}
 		}
 		
@@ -139,14 +147,6 @@ namespace LINQ
 			get
 			{
 				return this.GetTable<SalaryPayment>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TimeKeeping> TimeKeepings
-		{
-			get
-			{
-				return this.GetTable<TimeKeeping>();
 			}
 		}
 	}
@@ -576,6 +576,157 @@ namespace LINQ
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TimeKeepings")]
+	public partial class TimeKeeping : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _EmployeeId;
+		
+		private System.Nullable<System.DateTime> _DayWorking;
+		
+		private System.Nullable<int> _HOURS;
+		
+		private EntityRef<Employee> _Employee;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEmployeeIdChanging(string value);
+    partial void OnEmployeeIdChanged();
+    partial void OnDayWorkingChanging(System.Nullable<System.DateTime> value);
+    partial void OnDayWorkingChanged();
+    partial void OnHOURSChanging(System.Nullable<int> value);
+    partial void OnHOURSChanged();
+    #endregion
+		
+		public TimeKeeping()
+		{
+			this._Employee = default(EntityRef<Employee>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeId", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string EmployeeId
+		{
+			get
+			{
+				return this._EmployeeId;
+			}
+			set
+			{
+				if ((this._EmployeeId != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnEmployeeIdChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeId = value;
+					this.SendPropertyChanged("EmployeeId");
+					this.OnEmployeeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DayWorking", DbType="Date")]
+		public System.Nullable<System.DateTime> DayWorking
+		{
+			get
+			{
+				return this._DayWorking;
+			}
+			set
+			{
+				if ((this._DayWorking != value))
+				{
+					this.OnDayWorkingChanging(value);
+					this.SendPropertyChanging();
+					this._DayWorking = value;
+					this.SendPropertyChanged("DayWorking");
+					this.OnDayWorkingChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOURS", DbType="Int")]
+		public System.Nullable<int> HOURS
+		{
+			get
+			{
+				return this._HOURS;
+			}
+			set
+			{
+				if ((this._HOURS != value))
+				{
+					this.OnHOURSChanging(value);
+					this.SendPropertyChanging();
+					this._HOURS = value;
+					this.SendPropertyChanged("HOURS");
+					this.OnHOURSChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_TimeKeeping", Storage="_Employee", ThisKey="EmployeeId", OtherKey="EmployeeId", IsForeignKey=true)]
+		public Employee Employee
+		{
+			get
+			{
+				return this._Employee.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee.Entity = null;
+						previousValue.TimeKeeping = null;
+					}
+					this._Employee.Entity = value;
+					if ((value != null))
+					{
+						value.TimeKeeping = this;
+						this._EmployeeId = value.EmployeeId;
+					}
+					else
+					{
+						this._EmployeeId = default(string);
+					}
+					this.SendPropertyChanged("Employee");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DiscountServices")]
 	public partial class DiscountService : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -786,9 +937,9 @@ namespace LINQ
 		
 		private EntitySet<CasualBooking> _CasualBookings;
 		
-		private EntityRef<SalaryPayment> _SalaryPayment;
-		
 		private EntityRef<TimeKeeping> _TimeKeeping;
+		
+		private EntityRef<SalaryPayment> _SalaryPayment;
 		
 		private EntityRef<Role> _Role;
 		
@@ -817,8 +968,8 @@ namespace LINQ
 		public Employee()
 		{
 			this._CasualBookings = new EntitySet<CasualBooking>(new Action<CasualBooking>(this.attach_CasualBookings), new Action<CasualBooking>(this.detach_CasualBookings));
-			this._SalaryPayment = default(EntityRef<SalaryPayment>);
 			this._TimeKeeping = default(EntityRef<TimeKeeping>);
+			this._SalaryPayment = default(EntityRef<SalaryPayment>);
 			this._Role = default(EntityRef<Role>);
 			OnCreated();
 		}
@@ -1000,35 +1151,6 @@ namespace LINQ
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_SalaryPayment", Storage="_SalaryPayment", ThisKey="EmployeeId", OtherKey="EmployeeId", IsUnique=true, IsForeignKey=false)]
-		public SalaryPayment SalaryPayment
-		{
-			get
-			{
-				return this._SalaryPayment.Entity;
-			}
-			set
-			{
-				SalaryPayment previousValue = this._SalaryPayment.Entity;
-				if (((previousValue != value) 
-							|| (this._SalaryPayment.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._SalaryPayment.Entity = null;
-						previousValue.Employee = null;
-					}
-					this._SalaryPayment.Entity = value;
-					if ((value != null))
-					{
-						value.Employee = this;
-					}
-					this.SendPropertyChanged("SalaryPayment");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_TimeKeeping", Storage="_TimeKeeping", ThisKey="EmployeeId", OtherKey="EmployeeId", IsUnique=true, IsForeignKey=false)]
 		public TimeKeeping TimeKeeping
 		{
@@ -1054,6 +1176,35 @@ namespace LINQ
 						value.Employee = this;
 					}
 					this.SendPropertyChanged("TimeKeeping");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_SalaryPayment", Storage="_SalaryPayment", ThisKey="EmployeeId", OtherKey="EmployeeId", IsUnique=true, IsForeignKey=false)]
+		public SalaryPayment SalaryPayment
+		{
+			get
+			{
+				return this._SalaryPayment.Entity;
+			}
+			set
+			{
+				SalaryPayment previousValue = this._SalaryPayment.Entity;
+				if (((previousValue != value) 
+							|| (this._SalaryPayment.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._SalaryPayment.Entity = null;
+						previousValue.Employee = null;
+					}
+					this._SalaryPayment.Entity = value;
+					if ((value != null))
+					{
+						value.Employee = this;
+					}
+					this.SendPropertyChanged("SalaryPayment");
 				}
 			}
 		}
@@ -1747,157 +1898,6 @@ namespace LINQ
 					if ((value != null))
 					{
 						value.SalaryPayment = this;
-						this._EmployeeId = value.EmployeeId;
-					}
-					else
-					{
-						this._EmployeeId = default(string);
-					}
-					this.SendPropertyChanged("Employee");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TimeKeepings")]
-	public partial class TimeKeeping : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _EmployeeId;
-		
-		private System.Nullable<System.DateTime> _DayWorking;
-		
-		private System.Nullable<int> _HOURS;
-		
-		private EntityRef<Employee> _Employee;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnEmployeeIdChanging(string value);
-    partial void OnEmployeeIdChanged();
-    partial void OnDayWorkingChanging(System.Nullable<System.DateTime> value);
-    partial void OnDayWorkingChanged();
-    partial void OnHOURSChanging(System.Nullable<int> value);
-    partial void OnHOURSChanged();
-    #endregion
-		
-		public TimeKeeping()
-		{
-			this._Employee = default(EntityRef<Employee>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeId", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string EmployeeId
-		{
-			get
-			{
-				return this._EmployeeId;
-			}
-			set
-			{
-				if ((this._EmployeeId != value))
-				{
-					if (this._Employee.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnEmployeeIdChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeeId = value;
-					this.SendPropertyChanged("EmployeeId");
-					this.OnEmployeeIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DayWorking", DbType="Date")]
-		public System.Nullable<System.DateTime> DayWorking
-		{
-			get
-			{
-				return this._DayWorking;
-			}
-			set
-			{
-				if ((this._DayWorking != value))
-				{
-					this.OnDayWorkingChanging(value);
-					this.SendPropertyChanging();
-					this._DayWorking = value;
-					this.SendPropertyChanged("DayWorking");
-					this.OnDayWorkingChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOURS", DbType="Int")]
-		public System.Nullable<int> HOURS
-		{
-			get
-			{
-				return this._HOURS;
-			}
-			set
-			{
-				if ((this._HOURS != value))
-				{
-					this.OnHOURSChanging(value);
-					this.SendPropertyChanging();
-					this._HOURS = value;
-					this.SendPropertyChanged("HOURS");
-					this.OnHOURSChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_TimeKeeping", Storage="_Employee", ThisKey="EmployeeId", OtherKey="EmployeeId", IsForeignKey=true)]
-		public Employee Employee
-		{
-			get
-			{
-				return this._Employee.Entity;
-			}
-			set
-			{
-				Employee previousValue = this._Employee.Entity;
-				if (((previousValue != value) 
-							|| (this._Employee.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Employee.Entity = null;
-						previousValue.TimeKeeping = null;
-					}
-					this._Employee.Entity = value;
-					if ((value != null))
-					{
-						value.TimeKeeping = this;
 						this._EmployeeId = value.EmployeeId;
 					}
 					else

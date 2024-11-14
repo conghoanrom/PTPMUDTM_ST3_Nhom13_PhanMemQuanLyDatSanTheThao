@@ -42,3 +42,25 @@ C:\Users\ADMIN\Máy tính\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\obj\Debug\My
 C:\Users\ADMIN\Máy tính\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.csproj.Up2Date
 C:\Users\ADMIN\Máy tính\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.dll
 C:\Users\ADMIN\Máy tính\Nhom13_ST3_QuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.pdb
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\bin\Debug\MyControls.dll
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\bin\Debug\MyControls.pdb
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\bin\Debug\LINQ.dll
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\bin\Debug\LINQ.pdb
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\bin\Debug\LINQ.dll.config
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Docking.pdb
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\bin\Debug\ComponentFactory.Krypton.Workspace.pdb
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.csproj.AssemblyReference.cache
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.EmployeeControl.resources
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.EmployeesControl.resources
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.FieldControl.resources
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.FieldsControl.resources
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.LoginControl.resources
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.Properties.Resources.resources
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.csproj.GenerateResource.cache
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.csproj.CoreCompileInputs.cache
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.csproj.Up2Date
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.dll
+D:\UDTM\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\MyControls\obj\Debug\MyControls.pdb
