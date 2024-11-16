@@ -45,9 +45,49 @@
     <Reference Include="ComponentFactory.Krypton.Workspace">
       <HintPath>..\..\..\..\..\Máy tính\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=112.1.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.112.1.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.4\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +98,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePasswordControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordControl.Designer.cs">
+      <DependentUpon>ChangePasswordControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatabaseControl.Designer.cs">
+      <DependentUpon>DatabaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DiscountControl.Designer.cs">
+      <DependentUpon>DiscountControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrinksControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DrinksControl.Designer.cs">
+      <DependentUpon>DrinksControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,15 +152,45 @@
     <Compile Include="LoginControl.Designer.cs">
       <DependentUpon>LoginControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfileControl.Designer.cs">
+      <DependentUpon>ProfileControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellDrinkControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SellDrinkControl.Designer.cs">
+      <DependentUpon>SellDrinkControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StatisticsControl.Designer.cs">
+      <DependentUpon>StatisticsControl.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ChangePasswordControl.resx">
+      <DependentUpon>ChangePasswordControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseControl.resx">
+      <DependentUpon>DatabaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscountControl.resx">
+      <DependentUpon>DiscountControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrinksControl.resx">
+      <DependentUpon>DrinksControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeControl.resx">
       <DependentUpon>EmployeeControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,16 +206,34 @@
     <EmbeddedResource Include="LoginControl.resx">
       <DependentUpon>LoginControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProfileControl.resx">
+      <DependentUpon>ProfileControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="SellDrinkControl.resx">
+      <DependentUpon>SellDrinkControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatisticsControl.resx">
+      <DependentUpon>StatisticsControl.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\game %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\API\API.csproj">
+      <Project>{7df8ad2f-621f-401f-a7a5-285d4ad26bd8}</Project>
+      <Name>API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{bc03ad9c-0fc9-4dd3-b966-a2218340145f}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LINQ\LINQ.csproj">
       <Project>{8db9f02d-4b42-4dab-ac7b-4a34e730c880}</Project>
       <Name>LINQ</Name>

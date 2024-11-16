@@ -1,103 +1,166 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 11.125" name="SportsFieldManagementContext">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.625, 15.75" name="SportsFieldManagementContext">
   <DataContextMoniker Name="/SportsFieldManagementContextDataContext" />
   <nestedChildShapes>
-    <classShape Id="18902bf8-f719-43a7-8b05-00be593a4d50" absoluteBounds="9.25, 4.375, 2, 2.9247054036458326">
+    <classShape Id="a0c2ba93-286c-4335-a332-c72b227bee82" absoluteBounds="6.25, 5.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SportsFieldManagementContextDataContext/BillDrink" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0bfd716-69c3-4e72-b867-7c792b3bce24" absoluteBounds="6.265, 6.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11674d40-cab2-4673-b224-5a98ccfe6ef7" absoluteBounds="9.25, 2.375, 2, 2.9247054036458326">
       <DataClassMoniker Name="/SportsFieldManagementContextDataContext/CasualBooking" />
       <nestedChildShapes>
-        <elementListCompartment Id="51b636ae-6bb3-48f9-bcc7-7b09f090f7b1" absoluteBounds="9.265, 4.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="38f53c5a-f010-4106-b58e-1cb60d506f8a" absoluteBounds="9.265, 2.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="faca8530-0602-45b3-9707-207e32f373c1" absoluteBounds="6.5, 9.125, 2, 1.7708968098958344">
+    <classShape Id="41f845e7-03b2-463f-b65a-4d33084a8aa9" absoluteBounds="9, 6, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/SportsFieldManagementContextDataContext/DetailBill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80718cfe-bff0-4bb3-838e-18a033f349ef" absoluteBounds="9.015, 6.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7e0f451-46d9-46f3-a2aa-7e317c5cc087" absoluteBounds="6.5, 11.125, 2, 1.7708968098958344">
       <DataClassMoniker Name="/SportsFieldManagementContextDataContext/DiscountService" />
       <nestedChildShapes>
-        <elementListCompartment Id="f1763a0e-b951-4b3f-b0cf-fc34f8adc5ab" absoluteBounds="6.515, 9.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="55b8cb47-57f1-4b79-8de3-e3ac6d6a96d6" absoluteBounds="6.515, 11.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4d98da3f-20af-4d7f-b17e-890f6fd305bd" absoluteBounds="3.5, 4.625, 2, 2.3478011067708335">
+    <classShape Id="02093670-4152-4234-a214-97cd658d442f" absoluteBounds="6.25, 13.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SportsFieldManagementContextDataContext/Drink" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8ffb9a5-d1e3-4142-bd18-256e3c3eb87a" absoluteBounds="6.265, 14.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f48f8774-8ded-42df-a110-835d215015d7" absoluteBounds="3.5, 5.625, 2, 2.3478011067708326">
       <DataClassMoniker Name="/SportsFieldManagementContextDataContext/Employee" />
       <nestedChildShapes>
-        <elementListCompartment Id="123fb45d-13b0-450f-9e75-70210f5da9e3" absoluteBounds="3.515, 5.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="129b8556-6412-4c72-a327-1a686f9e0359" absoluteBounds="3.515, 6.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="e8eb2d6a-cd76-470d-a71e-129a8bf39244" absoluteBounds="6.5, 0.75, 2, 1.5785953776041666">
+    <classShape Id="c171a5e1-0c11-46eb-b5b3-7903f12eea2a" absoluteBounds="6.5, 0.75, 2, 1.5785953776041666">
       <DataClassMoniker Name="/SportsFieldManagementContextDataContext/Field" />
       <nestedChildShapes>
-        <elementListCompartment Id="2fbbb0fa-1ebc-4b23-b6a8-d2d6c4e8f56c" absoluteBounds="6.515, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="c00aaee5-105d-4040-9f89-0d82149e114c" absoluteBounds="6.515, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="ea55007a-3b56-4886-9294-f98fd6f08a46" absoluteBounds="3.75, 0.875, 2, 1.5785953776041666">
+    <classShape Id="9913ca60-489b-467b-856a-12e64b03b9bc" absoluteBounds="3.75, 0.875, 2, 1.5785953776041666">
       <DataClassMoniker Name="/SportsFieldManagementContextDataContext/FieldType" />
       <nestedChildShapes>
-        <elementListCompartment Id="3324c5b6-fcc2-4180-bf2f-be9591a005d1" absoluteBounds="3.765, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5e2327d4-32aa-4ccc-a154-805b5d1fb219" absoluteBounds="3.765, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="48c1b7af-2eb9-44ee-b1d8-3040295bd5d7" absoluteBounds="0.75, 5.25, 2, 1.1939925130208344">
+    <classShape Id="d048e183-5a7d-4e5e-bac9-3d27c222dbdf" absoluteBounds="0.75, 6.25, 2, 1.1939925130208326">
       <DataClassMoniker Name="/SportsFieldManagementContextDataContext/Role" />
       <nestedChildShapes>
-        <elementListCompartment Id="57aebc59-ccd1-4680-80e7-505f4367546e" absoluteBounds="0.765, 5.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d28bb4fb-2b8d-4ba3-8761-756a26e7e7e8" absoluteBounds="0.765, 6.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="e53f79d1-b4ca-407e-885f-cebf515e7481" absoluteBounds="6.25, 6.125, 2, 1.5785953776041666">
+    <classShape Id="0739efab-f882-42f0-8fe9-c1c8802fbbb4" absoluteBounds="6.25, 8.25, 2, 1.5785953776041666">
       <DataClassMoniker Name="/SportsFieldManagementContextDataContext/SalaryPayment" />
       <nestedChildShapes>
-        <elementListCompartment Id="63dd7b4b-c348-42c2-b2bc-33da5343d232" absoluteBounds="6.265, 6.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="13fef524-8084-48b4-8a5e-69185517cdb1" absoluteBounds="6.265, 8.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="927fddb3-f01c-408a-bab2-f01f947e9872" absoluteBounds="6.25, 4, 2, 1.3862939453125005">
+    <classShape Id="47f7e6dc-11c6-4464-86c6-1fe78f076e38" absoluteBounds="6.25, 3.75, 2, 1.3862939453125005">
       <DataClassMoniker Name="/SportsFieldManagementContextDataContext/TimeKeeping" />
       <nestedChildShapes>
-        <elementListCompartment Id="d6eda8eb-be99-4a16-9683-77a9619caa06" absoluteBounds="6.265, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f2f4a2bc-ebb0-470e-bf51-fd53ffa152ab" absoluteBounds="6.265, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(8.40625 : 9.125); (8.40625 : 5.75564697265625); (9.25 : 5.75564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.25 : 6.69314697265625); (9 : 6.69314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SportsFieldManagementContextDataContext/BillDrink/BillDrink_DetailBill" />
+      <nodes>
+        <classShapeMoniker Id="a0c2ba93-286c-4335-a332-c72b227bee82" />
+        <classShapeMoniker Id="41f845e7-03b2-463f-b65a-4d33084a8aa9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 11.125); (8.40625 : 3.03125); (9.25 : 3.03125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SportsFieldManagementContextDataContext/DiscountService/DiscountService_CasualBooking" />
       <nodes>
-        <classShapeMoniker Id="faca8530-0602-45b3-9707-207e32f373c1" />
-        <classShapeMoniker Id="18902bf8-f719-43a7-8b05-00be593a4d50" />
+        <classShapeMoniker Id="e7e0f451-46d9-46f3-a2aa-7e317c5cc087" />
+        <classShapeMoniker Id="11674d40-cab2-4673-b224-5a98ccfe6ef7" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 5.97157348632813); (8.32291666666667 : 5.97157348632812 : JumpStart); (8.48958333333333 : 5.97157348632813 : JumpEnd); (9.25 : 5.97157348632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.25 : 14.6642976888021); (10 : 14.6642976888021); (10 : 7.3862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SportsFieldManagementContextDataContext/Drink/Drink_DetailBill" />
+      <nodes>
+        <classShapeMoniker Id="02093670-4152-4234-a214-97cd658d442f" />
+        <classShapeMoniker Id="41f845e7-03b2-463f-b65a-4d33084a8aa9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.66429768880208); (6.25 : 6.66429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SportsFieldManagementContextDataContext/Employee/Employee_BillDrink" />
+      <nodes>
+        <classShapeMoniker Id="f48f8774-8ded-42df-a110-835d215015d7" />
+        <classShapeMoniker Id="a0c2ba93-286c-4335-a332-c72b227bee82" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.7444482421875); (8.32291666666667 : 7.7444482421875 : JumpStart); (8.48958333333333 : 7.7444482421875 : JumpEnd); (11.15625 : 7.7444482421875); (11.15625 : 5.29970540364583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SportsFieldManagementContextDataContext/Employee/Employee_CasualBooking" />
       <nodes>
-        <classShapeMoniker Id="4d98da3f-20af-4d7f-b17e-890f6fd305bd" />
-        <classShapeMoniker Id="18902bf8-f719-43a7-8b05-00be593a4d50" />
+        <classShapeMoniker Id="f48f8774-8ded-42df-a110-835d215015d7" />
+        <classShapeMoniker Id="11674d40-cab2-4673-b224-5a98ccfe6ef7" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.453125 : 2.32859537760417); (8.453125 : 5.57096795898438); (9.25 : 5.57096795898438)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.5 : 1.53929768880208); (10.25 : 1.53929768880208); (10.25 : 2.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SportsFieldManagementContextDataContext/Field/Field_CasualBooking" />
       <nodes>
-        <classShapeMoniker Id="e8eb2d6a-cd76-470d-a71e-129a8bf39244" />
-        <classShapeMoniker Id="18902bf8-f719-43a7-8b05-00be593a4d50" />
+        <classShapeMoniker Id="c171a5e1-0c11-46eb-b5b3-7903f12eea2a" />
+        <classShapeMoniker Id="11674d40-cab2-4673-b224-5a98ccfe6ef7" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.75 : 1.60179768880208); (6.5 : 1.60179768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.75 : 1.60179768880208); (6.5 : 1.60179768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SportsFieldManagementContextDataContext/FieldType/FieldType_Field" />
       <nodes>
-        <classShapeMoniker Id="ea55007a-3b56-4886-9294-f98fd6f08a46" />
-        <classShapeMoniker Id="e8eb2d6a-cd76-470d-a71e-129a8bf39244" />
+        <classShapeMoniker Id="9913ca60-489b-467b-856a-12e64b03b9bc" />
+        <classShapeMoniker Id="c171a5e1-0c11-46eb-b5b3-7903f12eea2a" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 5.84699625651042); (3.5 : 5.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 6.84699625651042); (3.5 : 6.84699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SportsFieldManagementContextDataContext/Role/Role_Employee" />
       <nodes>
-        <classShapeMoniker Id="48c1b7af-2eb9-44ee-b1d8-3040295bd5d7" />
-        <classShapeMoniker Id="4d98da3f-20af-4d7f-b17e-890f6fd305bd" />
+        <classShapeMoniker Id="d048e183-5a7d-4e5e-bac9-3d27c222dbdf" />
+        <classShapeMoniker Id="f48f8774-8ded-42df-a110-835d215015d7" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 6.54890055338542); (6.25 : 6.54890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.5 : 7.97280110677083); (4.5 : 9.03929768880208); (6.25 : 9.03929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SportsFieldManagementContextDataContext/Employee/Employee_SalaryPayment" />
       <nodes>
-        <classShapeMoniker Id="4d98da3f-20af-4d7f-b17e-890f6fd305bd" />
-        <classShapeMoniker Id="e53f79d1-b4ca-407e-885f-cebf515e7481" />
+        <classShapeMoniker Id="f48f8774-8ded-42df-a110-835d215015d7" />
+        <classShapeMoniker Id="0739efab-f882-42f0-8fe9-c1c8802fbbb4" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 5.00564697265625); (6.25 : 5.00564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.53125 : 5.625); (4.53125 : 4.44314697265625); (6.25 : 4.44314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/SportsFieldManagementContextDataContext/Employee/Employee_TimeKeeping" />
       <nodes>
-        <classShapeMoniker Id="4d98da3f-20af-4d7f-b17e-890f6fd305bd" />
-        <classShapeMoniker Id="927fddb3-f01c-408a-bab2-f01f947e9872" />
+        <classShapeMoniker Id="f48f8774-8ded-42df-a110-835d215015d7" />
+        <classShapeMoniker Id="47f7e6dc-11c6-4464-86c6-1fe78f076e38" />
       </nodes>
     </associationConnector>
+    <classShape Id="adfc8cda-5348-4385-84bb-e469d38ce404" absoluteBounds="1.5, 2.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SportsFieldManagementContextDataContext/RevenueOfnDay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e1b35d8-1c5f-4f32-93ba-91114255b615" absoluteBounds="1.5150000000000001, 2.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e4ebd8e1-fc6f-4484-a5a6-f3ab3b3a36ab" absoluteBounds="1.5, 0.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SportsFieldManagementContextDataContext/DrinkPurchaseQuantity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a0e2dff-ce79-403f-9af9-0a0ee8321245" absoluteBounds="1.5149999999999997, 1.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8dd4509e-e168-4de5-9454-2627191a27ee" absoluteBounds="1.5, 3.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SportsFieldManagementContextDataContext/BookingOfFieldType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a462d295-32c8-4ef2-bd0a-bc2d40f3f420" absoluteBounds="1.5149999999999997, 4.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f34628eb-e081-4146-9abb-aba33c9abf5c" absoluteBounds="0.75, 2.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SportsFieldManagementContextDataContext/TotalPriceOfDrink" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c4f812f-45b1-41f6-b054-f52d9f7dacf2" absoluteBounds="0.765, 2.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

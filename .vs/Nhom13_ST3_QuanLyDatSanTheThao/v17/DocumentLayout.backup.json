@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\fixedbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\fixedbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\mycontrols\\discountcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\discountcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\fixedbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\fixedbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\mycontrols\\discountcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\discountcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\bookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\bookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\fixedbookingform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\fixedbookingform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\mycontrols\\fieldscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\fieldscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FixedBookingForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\FixedBookingForm.Designer.cs",
-              "RelativeDocumentMoniker": "GUI\\FixedBookingForm.Designer.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\FixedBookingForm.Designer.cs",
-              "RelativeToolTip": "GUI\\FixedBookingForm.Designer.cs",
-              "ViewState": "AgIAAJoBAAAAAAAAAAAswH0BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T04:31:30.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookingForm.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\BookingForm.cs",
-              "RelativeDocumentMoniker": "GUI\\BookingForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\BookingForm.cs",
-              "RelativeToolTip": "GUI\\BookingForm.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAswFIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:56:16.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FixedBookingForm.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\FixedBookingForm.cs",
-              "RelativeDocumentMoniker": "GUI\\FixedBookingForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\FixedBookingForm.cs",
-              "RelativeToolTip": "GUI\\FixedBookingForm.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAAANMAAAAtAAAAAAAAAA==",
+              "Title": "DiscountControl.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\DiscountControl.cs",
+              "RelativeDocumentMoniker": "MyControls\\DiscountControl.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\DiscountControl.cs",
+              "RelativeToolTip": "MyControls\\DiscountControl.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAvwFQAAAB4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:31:37.17Z",
+              "WhenOpened": "2024-11-16T11:13:06.574Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FixedBookingForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\FixedBookingForm.cs",
-              "RelativeDocumentMoniker": "GUI\\FixedBookingForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\FixedBookingForm.cs [Design]",
-              "RelativeToolTip": "GUI\\FixedBookingForm.cs [Design]",
+              "Title": "DiscountControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\DiscountControl.cs",
+              "RelativeDocumentMoniker": "MyControls\\DiscountControl.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\DiscountControl.cs [Design]",
+              "RelativeToolTip": "MyControls\\DiscountControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:31:10.165Z",
+              "WhenOpened": "2024-11-16T11:09:34.861Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FieldsControl.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\FieldsControl.cs",
-              "RelativeDocumentMoniker": "MyControls\\FieldsControl.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\FieldsControl.cs",
-              "RelativeToolTip": "MyControls\\FieldsControl.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAcwEMAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs",
+              "RelativeDocumentMoniker": "GUI\\MainForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs",
+              "RelativeToolTip": "GUI\\MainForm.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAvwKAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:18:39.623Z",
+              "WhenOpened": "2024-11-16T11:09:09.252Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs",
+              "RelativeDocumentMoniker": "GUI\\MainForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs [Design]",
+              "RelativeToolTip": "GUI\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T11:09:07.338Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

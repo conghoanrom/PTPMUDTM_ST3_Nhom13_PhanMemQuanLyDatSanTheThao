@@ -15,42 +15,104 @@ namespace MyControls
     public partial class EmployeesControl : UserControl
     {
         private SportsFieldManagementContextDataContext db = new SportsFieldManagementContextDataContext();
-        public List<Employee> Employees { get; set; }
-        public EmployeesControl(List<Employee> Employees)
+        private string selectedEmployeeId = "";
+        public string EmployeeId { get; set; }
+        public EmployeesControl()
         {
             InitializeComponent();
-            this.Employees = Employees;
         }
 
         private void EmployeesControl_Load(object sender, EventArgs e)
         {
-            // Edit kryptonDataGridView1
-            kryptonDataGridView1.DataSource = Employees;
-            kryptonDataGridView1.Columns["TimeKeeping"].Visible = false;
-            kryptonDataGridView1.Columns["SalaryPayment"].Visible = false;
+            loadEmployees();
+            loadEmployeeControl("add");
+        }
+        private void loadEmployees()
+        {
+            var employees = db.Employees.Where(x => x.EmployeeId != this.EmployeeId).ToList();
+            kryptonDataGridView1.DataSource = employees;
+            //loại bỏ cột không cần thiết
             kryptonDataGridView1.Columns["Password"].Visible = false;
-            kryptonDataGridView1.Columns["RoleId"].Visible = false;
             kryptonDataGridView1.Columns["Role"].Visible = false;
-            kryptonDataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            kryptonDataGridView1.Columns["Username"].Visible = false;
+            kryptonDataGridView1.Columns["SalaryPayment"].Visible = false;
+            kryptonDataGridView1.Columns["TimeKeeping"].Visible = false;
+        }
+        private void loadEmployeeControl(string mode)
+        {
+            EmployeeControl employeeControl = new EmployeeControl();
+            employeeControl.AddEmployee += new EmployeeControl.handleAddEmployee(addEmployee);
+            employeeControl.DeleteEmployee += new EmployeeControl.handleDeleteEmployee(deleteEmployee);
+            employeeControl.EditEmployee += new EmployeeControl.handleEditEmployee(editEmployee);
+            employeeControl.Dock = DockStyle.Fill;
+            employeeControl.Mode = mode;
+            if (mode == "edit")
+            {
+                employeeControl.Employee = db.Employees.SingleOrDefault(x => x.EmployeeId == selectedEmployeeId);
+            }
+            this.kryptonPanel2.Controls.Clear();
+            this.kryptonPanel2.Controls.Add(employeeControl);
         }
 
         private void kryptonDataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // lấy id của nhân viên được chọn
             if (e.RowIndex >= 0)
             {
-                // Lấy thông tin của hàng đã nhấp
-                DataGridViewRow row = kryptonDataGridView1.Rows[e.RowIndex];
+                DataGridViewRow row = this.kryptonDataGridView1.Rows[e.RowIndex];
+                selectedEmployeeId = row.Cells["EmployeeId"].Value.ToString();
+                loadEmployeeControl("edit");
+            }
+        }
 
-                // Ví dụ: Lấy giá trị của cột đầu tiên trong hàng đã nhấp
-                string employeeId = row.Cells[0].Value.ToString();
-                //KryptonMessageBox.Show("Bạn vừa nhấn vào nhân viên: " + employeeId);
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            this.loadEmployeeControl("add");
+        }
 
-                // Hiển thị thông tin chi tiết của nhân viên
-                Employee employee = db.Employees.Where(x => x.EmployeeId == employeeId).FirstOrDefault();
-                EmployeeControl employeeControl = new EmployeeControl(employee);
-
-                this.kryptonPanel2.Controls.Clear();
-                this.kryptonPanel2.Controls.Add(employeeControl);
+        private void addEmployee(Employee employee)
+        {
+            try
+            {
+                db.Employees.InsertOnSubmit(employee);
+                db.SubmitChanges();
+                loadEmployees();
+            }
+            catch (Exception ex)
+            {
+                KryptonMessageBox.Show("Thêm nhân viên thất bại(" + ex.Message + ")", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void editEmployee(string EmployeeId, string roleId)
+        {
+            try
+            {
+                //Tìm và sửa
+                Employee currentEmployee = db.Employees.SingleOrDefault(x => x.EmployeeId == EmployeeId);
+                // Tìm role
+                Role role = db.Roles.SingleOrDefault(x => x.RoleId == roleId);
+                currentEmployee.Role = role;
+                db.SubmitChanges();
+                loadEmployees();
+            }
+            catch (Exception ex)
+            {
+                KryptonMessageBox.Show("Cập nhật thất bại(" + ex.Message + ")", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void deleteEmployee(string employeeId)
+        {
+            try
+            {
+                // Tìm và xóa
+                Employee currentEmployee = db.Employees.SingleOrDefault(x => x.EmployeeId == employeeId);
+                db.Employees.DeleteOnSubmit(currentEmployee);
+                db.SubmitChanges();
+                loadEmployees();
+            }
+            catch (Exception ex)
+            {
+                KryptonMessageBox.Show("Xóa nhân viên thất bại(" + ex.Message + ")", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

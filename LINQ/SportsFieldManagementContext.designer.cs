@@ -30,12 +30,21 @@ namespace LINQ
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertBillDrink(BillDrink instance);
+    partial void UpdateBillDrink(BillDrink instance);
+    partial void DeleteBillDrink(BillDrink instance);
     partial void InsertCasualBooking(CasualBooking instance);
     partial void UpdateCasualBooking(CasualBooking instance);
     partial void DeleteCasualBooking(CasualBooking instance);
+    partial void InsertDetailBill(DetailBill instance);
+    partial void UpdateDetailBill(DetailBill instance);
+    partial void DeleteDetailBill(DetailBill instance);
     partial void InsertDiscountService(DiscountService instance);
     partial void UpdateDiscountService(DiscountService instance);
     partial void DeleteDiscountService(DiscountService instance);
+    partial void InsertDrink(Drink instance);
+    partial void UpdateDrink(Drink instance);
+    partial void DeleteDrink(Drink instance);
     partial void InsertEmployee(Employee instance);
     partial void UpdateEmployee(Employee instance);
     partial void DeleteEmployee(Employee instance);
@@ -86,6 +95,14 @@ namespace LINQ
 			OnCreated();
 		}
 		
+		public System.Data.Linq.Table<BillDrink> BillDrinks
+		{
+			get
+			{
+				return this.GetTable<BillDrink>();
+			}
+		}
+		
 		public System.Data.Linq.Table<CasualBooking> CasualBookings
 		{
 			get
@@ -94,11 +111,27 @@ namespace LINQ
 			}
 		}
 		
+		public System.Data.Linq.Table<DetailBill> DetailBills
+		{
+			get
+			{
+				return this.GetTable<DetailBill>();
+			}
+		}
+		
 		public System.Data.Linq.Table<DiscountService> DiscountServices
 		{
 			get
 			{
 				return this.GetTable<DiscountService>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Drink> Drinks
+		{
+			get
+			{
+				return this.GetTable<Drink>();
 			}
 		}
 		
@@ -148,6 +181,241 @@ namespace LINQ
 			{
 				return this.GetTable<TimeKeeping>();
 			}
+		}
+		
+		public System.Data.Linq.Table<RevenueOfnDay> RevenueOfnDays
+		{
+			get
+			{
+				return this.GetTable<RevenueOfnDay>();
+			}
+		}
+		
+		public System.Data.Linq.Table<DrinkPurchaseQuantity> DrinkPurchaseQuantities
+		{
+			get
+			{
+				return this.GetTable<DrinkPurchaseQuantity>();
+			}
+		}
+		
+		public System.Data.Linq.Table<BookingOfFieldType> BookingOfFieldTypes
+		{
+			get
+			{
+				return this.GetTable<BookingOfFieldType>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TotalPriceOfDrink> TotalPriceOfDrinks
+		{
+			get
+			{
+				return this.GetTable<TotalPriceOfDrink>();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BillDrinks")]
+	public partial class BillDrink : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _BillId;
+		
+		private System.Nullable<System.DateTime> _CreateAt;
+		
+		private System.Nullable<int> _TotalPrice;
+		
+		private string _EmployeeId;
+		
+		private EntitySet<DetailBill> _DetailBills;
+		
+		private EntityRef<Employee> _Employee;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnBillIdChanging(string value);
+    partial void OnBillIdChanged();
+    partial void OnCreateAtChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreateAtChanged();
+    partial void OnTotalPriceChanging(System.Nullable<int> value);
+    partial void OnTotalPriceChanged();
+    partial void OnEmployeeIdChanging(string value);
+    partial void OnEmployeeIdChanged();
+    #endregion
+		
+		public BillDrink()
+		{
+			this._DetailBills = new EntitySet<DetailBill>(new Action<DetailBill>(this.attach_DetailBills), new Action<DetailBill>(this.detach_DetailBills));
+			this._Employee = default(EntityRef<Employee>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BillId", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string BillId
+		{
+			get
+			{
+				return this._BillId;
+			}
+			set
+			{
+				if ((this._BillId != value))
+				{
+					this.OnBillIdChanging(value);
+					this.SendPropertyChanging();
+					this._BillId = value;
+					this.SendPropertyChanged("BillId");
+					this.OnBillIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateAt", DbType="Date")]
+		public System.Nullable<System.DateTime> CreateAt
+		{
+			get
+			{
+				return this._CreateAt;
+			}
+			set
+			{
+				if ((this._CreateAt != value))
+				{
+					this.OnCreateAtChanging(value);
+					this.SendPropertyChanging();
+					this._CreateAt = value;
+					this.SendPropertyChanged("CreateAt");
+					this.OnCreateAtChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalPrice", DbType="Int")]
+		public System.Nullable<int> TotalPrice
+		{
+			get
+			{
+				return this._TotalPrice;
+			}
+			set
+			{
+				if ((this._TotalPrice != value))
+				{
+					this.OnTotalPriceChanging(value);
+					this.SendPropertyChanging();
+					this._TotalPrice = value;
+					this.SendPropertyChanged("TotalPrice");
+					this.OnTotalPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeId", DbType="VarChar(5)")]
+		public string EmployeeId
+		{
+			get
+			{
+				return this._EmployeeId;
+			}
+			set
+			{
+				if ((this._EmployeeId != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnEmployeeIdChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeId = value;
+					this.SendPropertyChanged("EmployeeId");
+					this.OnEmployeeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BillDrink_DetailBill", Storage="_DetailBills", ThisKey="BillId", OtherKey="BillId")]
+		public EntitySet<DetailBill> DetailBills
+		{
+			get
+			{
+				return this._DetailBills;
+			}
+			set
+			{
+				this._DetailBills.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_BillDrink", Storage="_Employee", ThisKey="EmployeeId", OtherKey="EmployeeId", IsForeignKey=true)]
+		public Employee Employee
+		{
+			get
+			{
+				return this._Employee.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee.Entity = null;
+						previousValue.BillDrinks.Remove(this);
+					}
+					this._Employee.Entity = value;
+					if ((value != null))
+					{
+						value.BillDrinks.Add(this);
+						this._EmployeeId = value.EmployeeId;
+					}
+					else
+					{
+						this._EmployeeId = default(string);
+					}
+					this.SendPropertyChanged("Employee");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_DetailBills(DetailBill entity)
+		{
+			this.SendPropertyChanging();
+			entity.BillDrink = this;
+		}
+		
+		private void detach_DetailBills(DetailBill entity)
+		{
+			this.SendPropertyChanging();
+			entity.BillDrink = null;
 		}
 	}
 	
@@ -576,6 +844,198 @@ namespace LINQ
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DetailBills")]
+	public partial class DetailBill : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _DrinkId;
+		
+		private string _BillId;
+		
+		private System.Nullable<int> _Amount;
+		
+		private EntityRef<BillDrink> _BillDrink;
+		
+		private EntityRef<Drink> _Drink;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDrinkIdChanging(int value);
+    partial void OnDrinkIdChanged();
+    partial void OnBillIdChanging(string value);
+    partial void OnBillIdChanged();
+    partial void OnAmountChanging(System.Nullable<int> value);
+    partial void OnAmountChanged();
+    #endregion
+		
+		public DetailBill()
+		{
+			this._BillDrink = default(EntityRef<BillDrink>);
+			this._Drink = default(EntityRef<Drink>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DrinkId", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int DrinkId
+		{
+			get
+			{
+				return this._DrinkId;
+			}
+			set
+			{
+				if ((this._DrinkId != value))
+				{
+					if (this._Drink.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDrinkIdChanging(value);
+					this.SendPropertyChanging();
+					this._DrinkId = value;
+					this.SendPropertyChanged("DrinkId");
+					this.OnDrinkIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BillId", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string BillId
+		{
+			get
+			{
+				return this._BillId;
+			}
+			set
+			{
+				if ((this._BillId != value))
+				{
+					if (this._BillDrink.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnBillIdChanging(value);
+					this.SendPropertyChanging();
+					this._BillId = value;
+					this.SendPropertyChanged("BillId");
+					this.OnBillIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Amount", DbType="Int")]
+		public System.Nullable<int> Amount
+		{
+			get
+			{
+				return this._Amount;
+			}
+			set
+			{
+				if ((this._Amount != value))
+				{
+					this.OnAmountChanging(value);
+					this.SendPropertyChanging();
+					this._Amount = value;
+					this.SendPropertyChanged("Amount");
+					this.OnAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BillDrink_DetailBill", Storage="_BillDrink", ThisKey="BillId", OtherKey="BillId", IsForeignKey=true)]
+		public BillDrink BillDrink
+		{
+			get
+			{
+				return this._BillDrink.Entity;
+			}
+			set
+			{
+				BillDrink previousValue = this._BillDrink.Entity;
+				if (((previousValue != value) 
+							|| (this._BillDrink.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._BillDrink.Entity = null;
+						previousValue.DetailBills.Remove(this);
+					}
+					this._BillDrink.Entity = value;
+					if ((value != null))
+					{
+						value.DetailBills.Add(this);
+						this._BillId = value.BillId;
+					}
+					else
+					{
+						this._BillId = default(string);
+					}
+					this.SendPropertyChanged("BillDrink");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Drink_DetailBill", Storage="_Drink", ThisKey="DrinkId", OtherKey="DrinkId", IsForeignKey=true)]
+		public Drink Drink
+		{
+			get
+			{
+				return this._Drink.Entity;
+			}
+			set
+			{
+				Drink previousValue = this._Drink.Entity;
+				if (((previousValue != value) 
+							|| (this._Drink.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Drink.Entity = null;
+						previousValue.DetailBills.Remove(this);
+					}
+					this._Drink.Entity = value;
+					if ((value != null))
+					{
+						value.DetailBills.Add(this);
+						this._DrinkId = value.DrinkId;
+					}
+					else
+					{
+						this._DrinkId = default(int);
+					}
+					this.SendPropertyChanged("Drink");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DiscountServices")]
 	public partial class DiscountService : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -762,6 +1222,168 @@ namespace LINQ
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Drinks")]
+	public partial class Drink : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _DrinkId;
+		
+		private string _DrinkName;
+		
+		private System.Nullable<int> _Quantity;
+		
+		private System.Nullable<int> _Price;
+		
+		private EntitySet<DetailBill> _DetailBills;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDrinkIdChanging(int value);
+    partial void OnDrinkIdChanged();
+    partial void OnDrinkNameChanging(string value);
+    partial void OnDrinkNameChanged();
+    partial void OnQuantityChanging(System.Nullable<int> value);
+    partial void OnQuantityChanged();
+    partial void OnPriceChanging(System.Nullable<int> value);
+    partial void OnPriceChanged();
+    #endregion
+		
+		public Drink()
+		{
+			this._DetailBills = new EntitySet<DetailBill>(new Action<DetailBill>(this.attach_DetailBills), new Action<DetailBill>(this.detach_DetailBills));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DrinkId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int DrinkId
+		{
+			get
+			{
+				return this._DrinkId;
+			}
+			set
+			{
+				if ((this._DrinkId != value))
+				{
+					this.OnDrinkIdChanging(value);
+					this.SendPropertyChanging();
+					this._DrinkId = value;
+					this.SendPropertyChanged("DrinkId");
+					this.OnDrinkIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DrinkName", DbType="NVarChar(50)")]
+		public string DrinkName
+		{
+			get
+			{
+				return this._DrinkName;
+			}
+			set
+			{
+				if ((this._DrinkName != value))
+				{
+					this.OnDrinkNameChanging(value);
+					this.SendPropertyChanging();
+					this._DrinkName = value;
+					this.SendPropertyChanged("DrinkName");
+					this.OnDrinkNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int")]
+		public System.Nullable<int> Quantity
+		{
+			get
+			{
+				return this._Quantity;
+			}
+			set
+			{
+				if ((this._Quantity != value))
+				{
+					this.OnQuantityChanging(value);
+					this.SendPropertyChanging();
+					this._Quantity = value;
+					this.SendPropertyChanged("Quantity");
+					this.OnQuantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Int")]
+		public System.Nullable<int> Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this.OnPriceChanging(value);
+					this.SendPropertyChanging();
+					this._Price = value;
+					this.SendPropertyChanged("Price");
+					this.OnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Drink_DetailBill", Storage="_DetailBills", ThisKey="DrinkId", OtherKey="DrinkId")]
+		public EntitySet<DetailBill> DetailBills
+		{
+			get
+			{
+				return this._DetailBills;
+			}
+			set
+			{
+				this._DetailBills.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_DetailBills(DetailBill entity)
+		{
+			this.SendPropertyChanging();
+			entity.Drink = this;
+		}
+		
+		private void detach_DetailBills(DetailBill entity)
+		{
+			this.SendPropertyChanging();
+			entity.Drink = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employees")]
 	public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -783,6 +1405,8 @@ namespace LINQ
 		private string _Password;
 		
 		private string _RoleId;
+		
+		private EntitySet<BillDrink> _BillDrinks;
 		
 		private EntitySet<CasualBooking> _CasualBookings;
 		
@@ -816,6 +1440,7 @@ namespace LINQ
 		
 		public Employee()
 		{
+			this._BillDrinks = new EntitySet<BillDrink>(new Action<BillDrink>(this.attach_BillDrinks), new Action<BillDrink>(this.detach_BillDrinks));
 			this._CasualBookings = new EntitySet<CasualBooking>(new Action<CasualBooking>(this.attach_CasualBookings), new Action<CasualBooking>(this.detach_CasualBookings));
 			this._SalaryPayment = default(EntityRef<SalaryPayment>);
 			this._TimeKeeping = default(EntityRef<TimeKeeping>);
@@ -987,6 +1612,19 @@ namespace LINQ
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_BillDrink", Storage="_BillDrinks", ThisKey="EmployeeId", OtherKey="EmployeeId")]
+		public EntitySet<BillDrink> BillDrinks
+		{
+			get
+			{
+				return this._BillDrinks;
+			}
+			set
+			{
+				this._BillDrinks.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_CasualBooking", Storage="_CasualBookings", ThisKey="EmployeeId", OtherKey="EmployeeId")]
 		public EntitySet<CasualBooking> CasualBookings
 		{
@@ -1110,6 +1748,18 @@ namespace LINQ
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_BillDrinks(BillDrink entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = this;
+		}
+		
+		private void detach_BillDrinks(BillDrink entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = null;
 		}
 		
 		private void attach_CasualBookings(CasualBooking entity)
@@ -1926,6 +2576,186 @@ namespace LINQ
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.RevenueOfnDay")]
+	public partial class RevenueOfnDay
+	{
+		
+		private System.Nullable<System.DateTime> _BookingDate;
+		
+		private System.Nullable<int> _DoanhThu;
+		
+		public RevenueOfnDay()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BookingDate", DbType="Date")]
+		public System.Nullable<System.DateTime> BookingDate
+		{
+			get
+			{
+				return this._BookingDate;
+			}
+			set
+			{
+				if ((this._BookingDate != value))
+				{
+					this._BookingDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DoanhThu", DbType="Int")]
+		public System.Nullable<int> DoanhThu
+		{
+			get
+			{
+				return this._DoanhThu;
+			}
+			set
+			{
+				if ((this._DoanhThu != value))
+				{
+					this._DoanhThu = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DrinkPurchaseQuantity")]
+	public partial class DrinkPurchaseQuantity
+	{
+		
+		private string _DrinkName;
+		
+		private System.Nullable<int> _PurchaseQuantity;
+		
+		public DrinkPurchaseQuantity()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DrinkName", DbType="NVarChar(50)")]
+		public string DrinkName
+		{
+			get
+			{
+				return this._DrinkName;
+			}
+			set
+			{
+				if ((this._DrinkName != value))
+				{
+					this._DrinkName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PurchaseQuantity", DbType="Int")]
+		public System.Nullable<int> PurchaseQuantity
+		{
+			get
+			{
+				return this._PurchaseQuantity;
+			}
+			set
+			{
+				if ((this._PurchaseQuantity != value))
+				{
+					this._PurchaseQuantity = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BookingOfFieldType")]
+	public partial class BookingOfFieldType
+	{
+		
+		private string _TypeName;
+		
+		private System.Nullable<int> _NumberOfBOOKINGS;
+		
+		public BookingOfFieldType()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeName", DbType="NVarChar(50)")]
+		public string TypeName
+		{
+			get
+			{
+				return this._TypeName;
+			}
+			set
+			{
+				if ((this._TypeName != value))
+				{
+					this._TypeName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumberOfBOOKINGS", DbType="Int")]
+		public System.Nullable<int> NumberOfBOOKINGS
+		{
+			get
+			{
+				return this._NumberOfBOOKINGS;
+			}
+			set
+			{
+				if ((this._NumberOfBOOKINGS != value))
+				{
+					this._NumberOfBOOKINGS = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TotalPriceOfDrink")]
+	public partial class TotalPriceOfDrink
+	{
+		
+		private string _DrinkName;
+		
+		private System.Nullable<int> _TotalPrice;
+		
+		public TotalPriceOfDrink()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DrinkName", DbType="NVarChar(50)")]
+		public string DrinkName
+		{
+			get
+			{
+				return this._DrinkName;
+			}
+			set
+			{
+				if ((this._DrinkName != value))
+				{
+					this._DrinkName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalPrice", DbType="Int")]
+		public System.Nullable<int> TotalPrice
+		{
+			get
+			{
+				return this._TotalPrice;
+			}
+			set
+			{
+				if ((this._TotalPrice != value))
+				{
+					this._TotalPrice = value;
+				}
 			}
 		}
 	}
