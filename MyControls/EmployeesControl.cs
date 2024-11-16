@@ -26,6 +26,15 @@ namespace MyControls
         {
             // Edit kryptonDataGridView1
             kryptonDataGridView1.DataSource = Employees;
+            editView();
+
+            EmployeeControl employeeControl = new EmployeeControl();
+            //this.kryptonPanel2.Controls.Clear();
+            this.kryptonPanel2.Controls.Add(employeeControl);
+        }
+
+        private void editView()
+        {
             kryptonDataGridView1.Columns["TimeKeeping"].Visible = false;
             kryptonDataGridView1.Columns["SalaryPayment"].Visible = false;
             kryptonDataGridView1.Columns["Password"].Visible = false;
@@ -52,6 +61,19 @@ namespace MyControls
                 this.kryptonPanel2.Controls.Clear();
                 this.kryptonPanel2.Controls.Add(employeeControl);
             }
+        }
+
+        //load lại view
+        public void Reload()
+        {
+            kryptonDataGridView1.DataSource = null;
+            kryptonDataGridView1.DataSource = db.Employees.ToList();
+            editView();
+        }
+        // làm mới chưa đúng định dạng của view, chưa test xoá sửa
+        private void kryptonLabel1_Click(object sender, EventArgs e)
+        {
+            Reload();
         }
     }
 }

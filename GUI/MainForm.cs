@@ -41,8 +41,8 @@ namespace GUI
             timeElapsed = TimeSpan.Zero;
             timer1.Start();
 
-            thốngKêToolStripMenuItem.Enabled = this.employee.RoleId.Equals("MANAGER");
-            quảnLíNhânViênToolStripMenuItem.Enabled = this.employee.RoleId.Equals("MANAGER");
+            //thốngKêToolStripMenuItem.Enabled = this.employee.RoleId.Equals("MANAGER");
+            //quảnLíNhânViênToolStripMenuItem.Enabled = this.employee.RoleId.Equals("MANAGER");
         }
 
         private void timer1_Tick(object sender, EventArgs e)

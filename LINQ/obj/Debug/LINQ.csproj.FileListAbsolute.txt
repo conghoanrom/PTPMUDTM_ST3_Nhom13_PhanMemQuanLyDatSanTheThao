@@ -12,3 +12,10 @@ C:\Users\ADMIN\Máy tính\Nhom13_ST3_QuanLyDatSanTheThao\LINQ\obj\Debug\LINQ.csp
 C:\Users\ADMIN\Máy tính\Nhom13_ST3_QuanLyDatSanTheThao\LINQ\obj\Debug\LINQ.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\Máy tính\Nhom13_ST3_QuanLyDatSanTheThao\LINQ\obj\Debug\LINQ.dll
 C:\Users\ADMIN\Máy tính\Nhom13_ST3_QuanLyDatSanTheThao\LINQ\obj\Debug\LINQ.pdb
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\LINQ\bin\Debug\LINQ.dll.config
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\LINQ\bin\Debug\LINQ.dll
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\LINQ\bin\Debug\LINQ.pdb
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\LINQ\obj\Debug\LINQ.csproj.AssemblyReference.cache
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\LINQ\obj\Debug\LINQ.csproj.CoreCompileInputs.cache
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\LINQ\obj\Debug\LINQ.dll
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\LINQ\obj\Debug\LINQ.pdb

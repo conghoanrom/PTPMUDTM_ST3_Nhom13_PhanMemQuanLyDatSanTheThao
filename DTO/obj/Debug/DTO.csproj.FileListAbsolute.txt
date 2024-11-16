@@ -4,3 +4,9 @@ C:\Users\ADMIN\source\repos\Nhom13_ST3_QuanLyDatSanTheThao\DTO\obj\Debug\DTO.csp
 C:\Users\ADMIN\source\repos\Nhom13_ST3_QuanLyDatSanTheThao\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\source\repos\Nhom13_ST3_QuanLyDatSanTheThao\DTO\obj\Debug\DTO.dll
 C:\Users\ADMIN\source\repos\Nhom13_ST3_QuanLyDatSanTheThao\DTO\obj\Debug\DTO.pdb
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\DTO\bin\Debug\DTO.dll
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\DTO\bin\Debug\DTO.pdb
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\DTO\obj\Debug\DTO.dll
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\DTO\obj\Debug\DTO.pdb

@@ -126,6 +126,10 @@
       <Project>{8db9f02d-4b42-4dab-ac7b-4a34e730c880}</Project>
       <Name>LINQ</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{4859DEE4-61D4-48D9-99DD-2120FC3D8065}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pitch.png" />

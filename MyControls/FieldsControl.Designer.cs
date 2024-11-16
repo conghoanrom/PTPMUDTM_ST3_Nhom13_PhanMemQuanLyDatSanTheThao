@@ -81,6 +81,7 @@
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.Size = new System.Drawing.Size(1060, 771);
             this.kryptonPanel2.StateCommon.Color1 = System.Drawing.Color.White;
+            this.kryptonPanel2.StateCommon.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -208,6 +209,7 @@
             this.kryptonDateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonDateTimePicker1.Location = new System.Drawing.Point(3, 33);
             this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
+            this.kryptonDateTimePicker1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.kryptonDateTimePicker1.Size = new System.Drawing.Size(340, 52);
             this.kryptonDateTimePicker1.TabIndex = 1;
             this.kryptonDateTimePicker1.ValueChanged += new System.EventHandler(this.kryptonDateTimePicker1_ValueChanged);
@@ -267,6 +269,7 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(504, 771);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.White;
+            this.kryptonPanel1.StateCommon.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPanel1.TabIndex = 0;
             // 
             // FieldsControl

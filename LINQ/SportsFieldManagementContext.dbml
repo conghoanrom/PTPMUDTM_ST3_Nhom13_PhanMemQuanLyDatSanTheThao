@@ -1,5 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBSPORTSFIELDBOOKING" Class="SportsFieldManagementContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=MSI;Initial Catalog=DBSPORTSFIELDBOOKING;User ID=sa;Encrypt=False" SettingsObjectName="LINQ.Properties.Settings" SettingsPropertyName="DBSPORTSFIELDBOOKINGConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DELL;Initial Catalog=DBSPORTSFIELDBOOKING;Persist Security Info=True;User ID=sa;Trust Server Certificate=True" SettingsObjectName="LINQ.Properties.Settings" SettingsPropertyName="DBSPORTSFIELDBOOKINGConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TimeKeepings" Member="TimeKeepings">
+    <Type Name="TimeKeeping">
+      <Column Name="EmployeeId" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DayWorking" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HOURS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Employee_TimeKeeping" Member="Employee" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SalaryPayments" Member="SalaryPayments">
+    <Type Name="SalaryPayment">
+      <Column Name="EmployeeId" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MonthWorking" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="SALARY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Employee_SalaryPayment" Member="Employee" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Roles" Member="Roles">
+    <Type Name="Role">
+      <Column Name="RoleId" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Role_Employee" Member="Employees" ThisKey="RoleId" OtherKey="RoleId" Type="Employee" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FieldTypes" Member="FieldTypes">
+    <Type Name="FieldType">
+      <Column Name="TypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CasualRentalPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FixedRentalPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FieldType_Field" Member="Fields" ThisKey="TypeId" OtherKey="TypeId" Type="Field" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Fields" Member="Fields">
+    <Type Name="Field">
+      <Column Name="FieldId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FieldName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Field_CasualBooking" Member="CasualBookings" ThisKey="FieldId" OtherKey="FieldId" Type="CasualBooking" />
+      <Association Name="FieldType_Field" Member="FieldType" ThisKey="TypeId" OtherKey="TypeId" Type="FieldType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employees" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="EmployeeId" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(7)" CanBeNull="true" />
+      <Column Name="Birth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RoleId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Employee_TimeKeeping" Member="TimeKeeping" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="TimeKeeping" Cardinality="One" />
+      <Association Name="Employee_SalaryPayment" Member="SalaryPayment" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="SalaryPayment" Cardinality="One" />
+      <Association Name="Employee_CasualBooking" Member="CasualBookings" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="CasualBooking" />
+      <Association Name="Role_Employee" Member="Role" ThisKey="RoleId" OtherKey="RoleId" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DiscountServices" Member="DiscountServices">
+    <Type Name="DiscountService">
+      <Column Name="ServiceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Days" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DiscountService_CasualBooking" Member="CasualBookings" ThisKey="ServiceId" OtherKey="ServiceId" Type="CasualBooking" />
+    </Type>
+  </Table>
   <Table Name="dbo.CasualBookings" Member="CasualBookings">
     <Type Name="CasualBooking">
       <Column Name="BookingId" Type="System.String" DbType="VarChar(11) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -13,78 +82,9 @@
       <Column Name="EmployeeId" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
       <Column Name="ServiceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TotalPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="DiscountService_CasualBooking" Member="DiscountService" ThisKey="ServiceId" OtherKey="ServiceId" Type="DiscountService" IsForeignKey="true" />
       <Association Name="Employee_CasualBooking" Member="Employee" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="Employee" IsForeignKey="true" />
       <Association Name="Field_CasualBooking" Member="Field" ThisKey="FieldId" OtherKey="FieldId" Type="Field" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.DiscountServices" Member="DiscountServices">
-    <Type Name="DiscountService">
-      <Column Name="ServiceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ServiceName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="StartDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="Days" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Discount" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="DiscountService_CasualBooking" Member="CasualBookings" ThisKey="ServiceId" OtherKey="ServiceId" Type="CasualBooking" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Employees" Member="Employees">
-    <Type Name="Employee">
-      <Column Name="EmployeeId" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="FullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Gender" Type="System.String" DbType="NVarChar(7)" CanBeNull="true" />
-      <Column Name="Birth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="Phone" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
-      <Column Name="Username" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="Password" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="RoleId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Association Name="Employee_CasualBooking" Member="CasualBookings" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="CasualBooking" />
-      <Association Name="Employee_SalaryPayment" Member="SalaryPayment" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="SalaryPayment" Cardinality="One" />
-      <Association Name="Employee_TimeKeeping" Member="TimeKeeping" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="TimeKeeping" Cardinality="One" />
-      <Association Name="Role_Employee" Member="Role" ThisKey="RoleId" OtherKey="RoleId" Type="Role" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Fields" Member="Fields">
-    <Type Name="Field">
-      <Column Name="FieldId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="FieldName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Location" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Field_CasualBooking" Member="CasualBookings" ThisKey="FieldId" OtherKey="FieldId" Type="CasualBooking" />
-      <Association Name="FieldType_Field" Member="FieldType" ThisKey="TypeId" OtherKey="TypeId" Type="FieldType" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.FieldTypes" Member="FieldTypes">
-    <Type Name="FieldType">
-      <Column Name="TypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="CasualRentalPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="FixedRentalPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="FieldType_Field" Member="Fields" ThisKey="TypeId" OtherKey="TypeId" Type="Field" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Roles" Member="Roles">
-    <Type Name="Role">
-      <Column Name="RoleId" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="RoleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="Role_Employee" Member="Employees" ThisKey="RoleId" OtherKey="RoleId" Type="Employee" />
-    </Type>
-  </Table>
-  <Table Name="dbo.SalaryPayments" Member="SalaryPayments">
-    <Type Name="SalaryPayment">
-      <Column Name="EmployeeId" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MonthWorking" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Status" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="SALARY" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Employee_SalaryPayment" Member="Employee" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="Employee" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TimeKeepings" Member="TimeKeepings">
-    <Type Name="TimeKeeping">
-      <Column Name="EmployeeId" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="DayWorking" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="HOURS" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Employee_TimeKeeping" Member="Employee" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="Employee" IsForeignKey="true" />
+      <Association Name="DiscountService_CasualBooking" Member="DiscountService" ThisKey="ServiceId" OtherKey="ServiceId" Type="DiscountService" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

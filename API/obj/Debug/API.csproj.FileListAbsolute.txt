@@ -4,3 +4,9 @@ C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\API\obj\Deb
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\API\obj\Debug\API.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\API\obj\Debug\API.dll
 C:\Users\ADMIN\Documents\Me\Learn.NET\Nhom13_ST3_QuanLyDatSanTheThao\API\obj\Debug\API.pdb
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\API\bin\Debug\API.dll
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\API\bin\Debug\API.pdb
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\API\obj\Debug\API.csproj.AssemblyReference.cache
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\API\obj\Debug\API.dll
+D:\Study\HK7\PTPMUDTM\doan\PTPMUDTM_ST3_Nhom13_PhanMemQuanLyDatSanTheThao\API\obj\Debug\API.pdb

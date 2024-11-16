@@ -30,34 +30,34 @@ namespace LINQ
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertCasualBooking(CasualBooking instance);
-    partial void UpdateCasualBooking(CasualBooking instance);
-    partial void DeleteCasualBooking(CasualBooking instance);
-    partial void InsertDiscountService(DiscountService instance);
-    partial void UpdateDiscountService(DiscountService instance);
-    partial void DeleteDiscountService(DiscountService instance);
-    partial void InsertEmployee(Employee instance);
-    partial void UpdateEmployee(Employee instance);
-    partial void DeleteEmployee(Employee instance);
-    partial void InsertField(Field instance);
-    partial void UpdateField(Field instance);
-    partial void DeleteField(Field instance);
-    partial void InsertFieldType(FieldType instance);
-    partial void UpdateFieldType(FieldType instance);
-    partial void DeleteFieldType(FieldType instance);
-    partial void InsertRole(Role instance);
-    partial void UpdateRole(Role instance);
-    partial void DeleteRole(Role instance);
-    partial void InsertSalaryPayment(SalaryPayment instance);
-    partial void UpdateSalaryPayment(SalaryPayment instance);
-    partial void DeleteSalaryPayment(SalaryPayment instance);
     partial void InsertTimeKeeping(TimeKeeping instance);
     partial void UpdateTimeKeeping(TimeKeeping instance);
     partial void DeleteTimeKeeping(TimeKeeping instance);
+    partial void InsertSalaryPayment(SalaryPayment instance);
+    partial void UpdateSalaryPayment(SalaryPayment instance);
+    partial void DeleteSalaryPayment(SalaryPayment instance);
+    partial void InsertRole(Role instance);
+    partial void UpdateRole(Role instance);
+    partial void DeleteRole(Role instance);
+    partial void InsertFieldType(FieldType instance);
+    partial void UpdateFieldType(FieldType instance);
+    partial void DeleteFieldType(FieldType instance);
+    partial void InsertField(Field instance);
+    partial void UpdateField(Field instance);
+    partial void DeleteField(Field instance);
+    partial void InsertEmployee(Employee instance);
+    partial void UpdateEmployee(Employee instance);
+    partial void DeleteEmployee(Employee instance);
+    partial void InsertDiscountService(DiscountService instance);
+    partial void UpdateDiscountService(DiscountService instance);
+    partial void DeleteDiscountService(DiscountService instance);
+    partial void InsertCasualBooking(CasualBooking instance);
+    partial void UpdateCasualBooking(CasualBooking instance);
+    partial void DeleteCasualBooking(CasualBooking instance);
     #endregion
 		
 		public SportsFieldManagementContextDataContext() : 
-				base(global::LINQ.Properties.Settings.Default.DBSPORTSFIELDBOOKINGConnectionString, mappingSource)
+				base(global::LINQ.Properties.Settings.Default.DBSPORTSFIELDBOOKINGConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -86,51 +86,11 @@ namespace LINQ
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<CasualBooking> CasualBookings
+		public System.Data.Linq.Table<TimeKeeping> TimeKeepings
 		{
 			get
 			{
-				return this.GetTable<CasualBooking>();
-			}
-		}
-		
-		public System.Data.Linq.Table<DiscountService> DiscountServices
-		{
-			get
-			{
-				return this.GetTable<DiscountService>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Employee> Employees
-		{
-			get
-			{
-				return this.GetTable<Employee>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Field> Fields
-		{
-			get
-			{
-				return this.GetTable<Field>();
-			}
-		}
-		
-		public System.Data.Linq.Table<FieldType> FieldTypes
-		{
-			get
-			{
-				return this.GetTable<FieldType>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Role> Roles
-		{
-			get
-			{
-				return this.GetTable<Role>();
+				return this.GetTable<TimeKeeping>();
 			}
 		}
 		
@@ -142,12 +102,1406 @@ namespace LINQ
 			}
 		}
 		
-		public System.Data.Linq.Table<TimeKeeping> TimeKeepings
+		public System.Data.Linq.Table<Role> Roles
 		{
 			get
 			{
-				return this.GetTable<TimeKeeping>();
+				return this.GetTable<Role>();
 			}
+		}
+		
+		public System.Data.Linq.Table<FieldType> FieldTypes
+		{
+			get
+			{
+				return this.GetTable<FieldType>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Field> Fields
+		{
+			get
+			{
+				return this.GetTable<Field>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Employee> Employees
+		{
+			get
+			{
+				return this.GetTable<Employee>();
+			}
+		}
+		
+		public System.Data.Linq.Table<DiscountService> DiscountServices
+		{
+			get
+			{
+				return this.GetTable<DiscountService>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CasualBooking> CasualBookings
+		{
+			get
+			{
+				return this.GetTable<CasualBooking>();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TimeKeepings")]
+	public partial class TimeKeeping : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _EmployeeId;
+		
+		private System.Nullable<System.DateTime> _DayWorking;
+		
+		private System.Nullable<int> _HOURS;
+		
+		private EntityRef<Employee> _Employee;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEmployeeIdChanging(string value);
+    partial void OnEmployeeIdChanged();
+    partial void OnDayWorkingChanging(System.Nullable<System.DateTime> value);
+    partial void OnDayWorkingChanged();
+    partial void OnHOURSChanging(System.Nullable<int> value);
+    partial void OnHOURSChanged();
+    #endregion
+		
+		public TimeKeeping()
+		{
+			this._Employee = default(EntityRef<Employee>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeId", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string EmployeeId
+		{
+			get
+			{
+				return this._EmployeeId;
+			}
+			set
+			{
+				if ((this._EmployeeId != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnEmployeeIdChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeId = value;
+					this.SendPropertyChanged("EmployeeId");
+					this.OnEmployeeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DayWorking", DbType="Date")]
+		public System.Nullable<System.DateTime> DayWorking
+		{
+			get
+			{
+				return this._DayWorking;
+			}
+			set
+			{
+				if ((this._DayWorking != value))
+				{
+					this.OnDayWorkingChanging(value);
+					this.SendPropertyChanging();
+					this._DayWorking = value;
+					this.SendPropertyChanged("DayWorking");
+					this.OnDayWorkingChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOURS", DbType="Int")]
+		public System.Nullable<int> HOURS
+		{
+			get
+			{
+				return this._HOURS;
+			}
+			set
+			{
+				if ((this._HOURS != value))
+				{
+					this.OnHOURSChanging(value);
+					this.SendPropertyChanging();
+					this._HOURS = value;
+					this.SendPropertyChanged("HOURS");
+					this.OnHOURSChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_TimeKeeping", Storage="_Employee", ThisKey="EmployeeId", OtherKey="EmployeeId", IsForeignKey=true)]
+		public Employee Employee
+		{
+			get
+			{
+				return this._Employee.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee.Entity = null;
+						previousValue.TimeKeeping = null;
+					}
+					this._Employee.Entity = value;
+					if ((value != null))
+					{
+						value.TimeKeeping = this;
+						this._EmployeeId = value.EmployeeId;
+					}
+					else
+					{
+						this._EmployeeId = default(string);
+					}
+					this.SendPropertyChanged("Employee");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SalaryPayments")]
+	public partial class SalaryPayment : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _EmployeeId;
+		
+		private System.Nullable<int> _MonthWorking;
+		
+		private string _Status;
+		
+		private System.Nullable<int> _SALARY;
+		
+		private EntityRef<Employee> _Employee;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEmployeeIdChanging(string value);
+    partial void OnEmployeeIdChanged();
+    partial void OnMonthWorkingChanging(System.Nullable<int> value);
+    partial void OnMonthWorkingChanged();
+    partial void OnStatusChanging(string value);
+    partial void OnStatusChanged();
+    partial void OnSALARYChanging(System.Nullable<int> value);
+    partial void OnSALARYChanged();
+    #endregion
+		
+		public SalaryPayment()
+		{
+			this._Employee = default(EntityRef<Employee>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeId", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string EmployeeId
+		{
+			get
+			{
+				return this._EmployeeId;
+			}
+			set
+			{
+				if ((this._EmployeeId != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnEmployeeIdChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeId = value;
+					this.SendPropertyChanged("EmployeeId");
+					this.OnEmployeeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MonthWorking", DbType="Int")]
+		public System.Nullable<int> MonthWorking
+		{
+			get
+			{
+				return this._MonthWorking;
+			}
+			set
+			{
+				if ((this._MonthWorking != value))
+				{
+					this.OnMonthWorkingChanging(value);
+					this.SendPropertyChanging();
+					this._MonthWorking = value;
+					this.SendPropertyChanged("MonthWorking");
+					this.OnMonthWorkingChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="NVarChar(30)")]
+		public string Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SALARY", DbType="Int")]
+		public System.Nullable<int> SALARY
+		{
+			get
+			{
+				return this._SALARY;
+			}
+			set
+			{
+				if ((this._SALARY != value))
+				{
+					this.OnSALARYChanging(value);
+					this.SendPropertyChanging();
+					this._SALARY = value;
+					this.SendPropertyChanged("SALARY");
+					this.OnSALARYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_SalaryPayment", Storage="_Employee", ThisKey="EmployeeId", OtherKey="EmployeeId", IsForeignKey=true)]
+		public Employee Employee
+		{
+			get
+			{
+				return this._Employee.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee.Entity = null;
+						previousValue.SalaryPayment = null;
+					}
+					this._Employee.Entity = value;
+					if ((value != null))
+					{
+						value.SalaryPayment = this;
+						this._EmployeeId = value.EmployeeId;
+					}
+					else
+					{
+						this._EmployeeId = default(string);
+					}
+					this.SendPropertyChanged("Employee");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Roles")]
+	public partial class Role : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _RoleId;
+		
+		private string _RoleName;
+		
+		private EntitySet<Employee> _Employees;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnRoleIdChanging(string value);
+    partial void OnRoleIdChanged();
+    partial void OnRoleNameChanging(string value);
+    partial void OnRoleNameChanged();
+    #endregion
+		
+		public Role()
+		{
+			this._Employees = new EntitySet<Employee>(new Action<Employee>(this.attach_Employees), new Action<Employee>(this.detach_Employees));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleId", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string RoleId
+		{
+			get
+			{
+				return this._RoleId;
+			}
+			set
+			{
+				if ((this._RoleId != value))
+				{
+					this.OnRoleIdChanging(value);
+					this.SendPropertyChanging();
+					this._RoleId = value;
+					this.SendPropertyChanged("RoleId");
+					this.OnRoleIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleName", DbType="NVarChar(50)")]
+		public string RoleName
+		{
+			get
+			{
+				return this._RoleName;
+			}
+			set
+			{
+				if ((this._RoleName != value))
+				{
+					this.OnRoleNameChanging(value);
+					this.SendPropertyChanging();
+					this._RoleName = value;
+					this.SendPropertyChanged("RoleName");
+					this.OnRoleNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Role_Employee", Storage="_Employees", ThisKey="RoleId", OtherKey="RoleId")]
+		public EntitySet<Employee> Employees
+		{
+			get
+			{
+				return this._Employees;
+			}
+			set
+			{
+				this._Employees.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Employees(Employee entity)
+		{
+			this.SendPropertyChanging();
+			entity.Role = this;
+		}
+		
+		private void detach_Employees(Employee entity)
+		{
+			this.SendPropertyChanging();
+			entity.Role = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.FieldTypes")]
+	public partial class FieldType : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _TypeId;
+		
+		private string _TypeName;
+		
+		private System.Nullable<int> _CasualRentalPrice;
+		
+		private System.Nullable<int> _FixedRentalPrice;
+		
+		private EntitySet<Field> _Fields;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTypeIdChanging(int value);
+    partial void OnTypeIdChanged();
+    partial void OnTypeNameChanging(string value);
+    partial void OnTypeNameChanged();
+    partial void OnCasualRentalPriceChanging(System.Nullable<int> value);
+    partial void OnCasualRentalPriceChanged();
+    partial void OnFixedRentalPriceChanging(System.Nullable<int> value);
+    partial void OnFixedRentalPriceChanged();
+    #endregion
+		
+		public FieldType()
+		{
+			this._Fields = new EntitySet<Field>(new Action<Field>(this.attach_Fields), new Action<Field>(this.detach_Fields));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int TypeId
+		{
+			get
+			{
+				return this._TypeId;
+			}
+			set
+			{
+				if ((this._TypeId != value))
+				{
+					this.OnTypeIdChanging(value);
+					this.SendPropertyChanging();
+					this._TypeId = value;
+					this.SendPropertyChanged("TypeId");
+					this.OnTypeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeName", DbType="NVarChar(50)")]
+		public string TypeName
+		{
+			get
+			{
+				return this._TypeName;
+			}
+			set
+			{
+				if ((this._TypeName != value))
+				{
+					this.OnTypeNameChanging(value);
+					this.SendPropertyChanging();
+					this._TypeName = value;
+					this.SendPropertyChanged("TypeName");
+					this.OnTypeNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CasualRentalPrice", DbType="Int")]
+		public System.Nullable<int> CasualRentalPrice
+		{
+			get
+			{
+				return this._CasualRentalPrice;
+			}
+			set
+			{
+				if ((this._CasualRentalPrice != value))
+				{
+					this.OnCasualRentalPriceChanging(value);
+					this.SendPropertyChanging();
+					this._CasualRentalPrice = value;
+					this.SendPropertyChanged("CasualRentalPrice");
+					this.OnCasualRentalPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FixedRentalPrice", DbType="Int")]
+		public System.Nullable<int> FixedRentalPrice
+		{
+			get
+			{
+				return this._FixedRentalPrice;
+			}
+			set
+			{
+				if ((this._FixedRentalPrice != value))
+				{
+					this.OnFixedRentalPriceChanging(value);
+					this.SendPropertyChanging();
+					this._FixedRentalPrice = value;
+					this.SendPropertyChanged("FixedRentalPrice");
+					this.OnFixedRentalPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FieldType_Field", Storage="_Fields", ThisKey="TypeId", OtherKey="TypeId")]
+		public EntitySet<Field> Fields
+		{
+			get
+			{
+				return this._Fields;
+			}
+			set
+			{
+				this._Fields.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Fields(Field entity)
+		{
+			this.SendPropertyChanging();
+			entity.FieldType = this;
+		}
+		
+		private void detach_Fields(Field entity)
+		{
+			this.SendPropertyChanging();
+			entity.FieldType = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Fields")]
+	public partial class Field : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _FieldId;
+		
+		private string _FieldName;
+		
+		private System.Nullable<int> _Location;
+		
+		private System.Nullable<int> _TypeId;
+		
+		private EntitySet<CasualBooking> _CasualBookings;
+		
+		private EntityRef<FieldType> _FieldType;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnFieldIdChanging(int value);
+    partial void OnFieldIdChanged();
+    partial void OnFieldNameChanging(string value);
+    partial void OnFieldNameChanged();
+    partial void OnLocationChanging(System.Nullable<int> value);
+    partial void OnLocationChanged();
+    partial void OnTypeIdChanging(System.Nullable<int> value);
+    partial void OnTypeIdChanged();
+    #endregion
+		
+		public Field()
+		{
+			this._CasualBookings = new EntitySet<CasualBooking>(new Action<CasualBooking>(this.attach_CasualBookings), new Action<CasualBooking>(this.detach_CasualBookings));
+			this._FieldType = default(EntityRef<FieldType>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FieldId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int FieldId
+		{
+			get
+			{
+				return this._FieldId;
+			}
+			set
+			{
+				if ((this._FieldId != value))
+				{
+					this.OnFieldIdChanging(value);
+					this.SendPropertyChanging();
+					this._FieldId = value;
+					this.SendPropertyChanged("FieldId");
+					this.OnFieldIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FieldName", DbType="NVarChar(50)")]
+		public string FieldName
+		{
+			get
+			{
+				return this._FieldName;
+			}
+			set
+			{
+				if ((this._FieldName != value))
+				{
+					this.OnFieldNameChanging(value);
+					this.SendPropertyChanging();
+					this._FieldName = value;
+					this.SendPropertyChanged("FieldName");
+					this.OnFieldNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location", DbType="Int")]
+		public System.Nullable<int> Location
+		{
+			get
+			{
+				return this._Location;
+			}
+			set
+			{
+				if ((this._Location != value))
+				{
+					this.OnLocationChanging(value);
+					this.SendPropertyChanging();
+					this._Location = value;
+					this.SendPropertyChanged("Location");
+					this.OnLocationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeId", DbType="Int")]
+		public System.Nullable<int> TypeId
+		{
+			get
+			{
+				return this._TypeId;
+			}
+			set
+			{
+				if ((this._TypeId != value))
+				{
+					if (this._FieldType.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnTypeIdChanging(value);
+					this.SendPropertyChanging();
+					this._TypeId = value;
+					this.SendPropertyChanged("TypeId");
+					this.OnTypeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Field_CasualBooking", Storage="_CasualBookings", ThisKey="FieldId", OtherKey="FieldId")]
+		public EntitySet<CasualBooking> CasualBookings
+		{
+			get
+			{
+				return this._CasualBookings;
+			}
+			set
+			{
+				this._CasualBookings.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FieldType_Field", Storage="_FieldType", ThisKey="TypeId", OtherKey="TypeId", IsForeignKey=true)]
+		public FieldType FieldType
+		{
+			get
+			{
+				return this._FieldType.Entity;
+			}
+			set
+			{
+				FieldType previousValue = this._FieldType.Entity;
+				if (((previousValue != value) 
+							|| (this._FieldType.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._FieldType.Entity = null;
+						previousValue.Fields.Remove(this);
+					}
+					this._FieldType.Entity = value;
+					if ((value != null))
+					{
+						value.Fields.Add(this);
+						this._TypeId = value.TypeId;
+					}
+					else
+					{
+						this._TypeId = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("FieldType");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_CasualBookings(CasualBooking entity)
+		{
+			this.SendPropertyChanging();
+			entity.Field = this;
+		}
+		
+		private void detach_CasualBookings(CasualBooking entity)
+		{
+			this.SendPropertyChanging();
+			entity.Field = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employees")]
+	public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _EmployeeId;
+		
+		private string _FullName;
+		
+		private string _Gender;
+		
+		private System.Nullable<System.DateTime> _Birth;
+		
+		private string _Phone;
+		
+		private string _Username;
+		
+		private string _Password;
+		
+		private string _RoleId;
+		
+		private EntityRef<TimeKeeping> _TimeKeeping;
+		
+		private EntityRef<SalaryPayment> _SalaryPayment;
+		
+		private EntitySet<CasualBooking> _CasualBookings;
+		
+		private EntityRef<Role> _Role;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEmployeeIdChanging(string value);
+    partial void OnEmployeeIdChanged();
+    partial void OnFullNameChanging(string value);
+    partial void OnFullNameChanged();
+    partial void OnGenderChanging(string value);
+    partial void OnGenderChanged();
+    partial void OnBirthChanging(System.Nullable<System.DateTime> value);
+    partial void OnBirthChanged();
+    partial void OnPhoneChanging(string value);
+    partial void OnPhoneChanged();
+    partial void OnUsernameChanging(string value);
+    partial void OnUsernameChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    partial void OnRoleIdChanging(string value);
+    partial void OnRoleIdChanged();
+    #endregion
+		
+		public Employee()
+		{
+			this._TimeKeeping = default(EntityRef<TimeKeeping>);
+			this._SalaryPayment = default(EntityRef<SalaryPayment>);
+			this._CasualBookings = new EntitySet<CasualBooking>(new Action<CasualBooking>(this.attach_CasualBookings), new Action<CasualBooking>(this.detach_CasualBookings));
+			this._Role = default(EntityRef<Role>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeId", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string EmployeeId
+		{
+			get
+			{
+				return this._EmployeeId;
+			}
+			set
+			{
+				if ((this._EmployeeId != value))
+				{
+					this.OnEmployeeIdChanging(value);
+					this.SendPropertyChanging();
+					this._EmployeeId = value;
+					this.SendPropertyChanged("EmployeeId");
+					this.OnEmployeeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullName", DbType="NVarChar(50)")]
+		public string FullName
+		{
+			get
+			{
+				return this._FullName;
+			}
+			set
+			{
+				if ((this._FullName != value))
+				{
+					this.OnFullNameChanging(value);
+					this.SendPropertyChanging();
+					this._FullName = value;
+					this.SendPropertyChanged("FullName");
+					this.OnFullNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="NVarChar(7)")]
+		public string Gender
+		{
+			get
+			{
+				return this._Gender;
+			}
+			set
+			{
+				if ((this._Gender != value))
+				{
+					this.OnGenderChanging(value);
+					this.SendPropertyChanging();
+					this._Gender = value;
+					this.SendPropertyChanged("Gender");
+					this.OnGenderChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Birth", DbType="Date")]
+		public System.Nullable<System.DateTime> Birth
+		{
+			get
+			{
+				return this._Birth;
+			}
+			set
+			{
+				if ((this._Birth != value))
+				{
+					this.OnBirthChanging(value);
+					this.SendPropertyChanging();
+					this._Birth = value;
+					this.SendPropertyChanged("Birth");
+					this.OnBirthChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="VarChar(11)")]
+		public string Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this.OnPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._Phone = value;
+					this.SendPropertyChanged("Phone");
+					this.OnPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="VarChar(100)")]
+		public string Username
+		{
+			get
+			{
+				return this._Username;
+			}
+			set
+			{
+				if ((this._Username != value))
+				{
+					this.OnUsernameChanging(value);
+					this.SendPropertyChanging();
+					this._Username = value;
+					this.SendPropertyChanged("Username");
+					this.OnUsernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="VarChar(100)")]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this.OnPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleId", DbType="VarChar(20)")]
+		public string RoleId
+		{
+			get
+			{
+				return this._RoleId;
+			}
+			set
+			{
+				if ((this._RoleId != value))
+				{
+					if (this._Role.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnRoleIdChanging(value);
+					this.SendPropertyChanging();
+					this._RoleId = value;
+					this.SendPropertyChanged("RoleId");
+					this.OnRoleIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_TimeKeeping", Storage="_TimeKeeping", ThisKey="EmployeeId", OtherKey="EmployeeId", IsUnique=true, IsForeignKey=false)]
+		public TimeKeeping TimeKeeping
+		{
+			get
+			{
+				return this._TimeKeeping.Entity;
+			}
+			set
+			{
+				TimeKeeping previousValue = this._TimeKeeping.Entity;
+				if (((previousValue != value) 
+							|| (this._TimeKeeping.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TimeKeeping.Entity = null;
+						previousValue.Employee = null;
+					}
+					this._TimeKeeping.Entity = value;
+					if ((value != null))
+					{
+						value.Employee = this;
+					}
+					this.SendPropertyChanged("TimeKeeping");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_SalaryPayment", Storage="_SalaryPayment", ThisKey="EmployeeId", OtherKey="EmployeeId", IsUnique=true, IsForeignKey=false)]
+		public SalaryPayment SalaryPayment
+		{
+			get
+			{
+				return this._SalaryPayment.Entity;
+			}
+			set
+			{
+				SalaryPayment previousValue = this._SalaryPayment.Entity;
+				if (((previousValue != value) 
+							|| (this._SalaryPayment.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._SalaryPayment.Entity = null;
+						previousValue.Employee = null;
+					}
+					this._SalaryPayment.Entity = value;
+					if ((value != null))
+					{
+						value.Employee = this;
+					}
+					this.SendPropertyChanged("SalaryPayment");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_CasualBooking", Storage="_CasualBookings", ThisKey="EmployeeId", OtherKey="EmployeeId")]
+		public EntitySet<CasualBooking> CasualBookings
+		{
+			get
+			{
+				return this._CasualBookings;
+			}
+			set
+			{
+				this._CasualBookings.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Role_Employee", Storage="_Role", ThisKey="RoleId", OtherKey="RoleId", IsForeignKey=true)]
+		public Role Role
+		{
+			get
+			{
+				return this._Role.Entity;
+			}
+			set
+			{
+				Role previousValue = this._Role.Entity;
+				if (((previousValue != value) 
+							|| (this._Role.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Role.Entity = null;
+						previousValue.Employees.Remove(this);
+					}
+					this._Role.Entity = value;
+					if ((value != null))
+					{
+						value.Employees.Add(this);
+						this._RoleId = value.RoleId;
+					}
+					else
+					{
+						this._RoleId = default(string);
+					}
+					this.SendPropertyChanged("Role");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_CasualBookings(CasualBooking entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = this;
+		}
+		
+		private void detach_CasualBookings(CasualBooking entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DiscountServices")]
+	public partial class DiscountService : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ServiceId;
+		
+		private string _ServiceName;
+		
+		private System.Nullable<System.DateTime> _StartDate;
+		
+		private System.Nullable<int> _Days;
+		
+		private System.Nullable<int> _Discount;
+		
+		private EntitySet<CasualBooking> _CasualBookings;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnServiceIdChanging(int value);
+    partial void OnServiceIdChanged();
+    partial void OnServiceNameChanging(string value);
+    partial void OnServiceNameChanged();
+    partial void OnStartDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnStartDateChanged();
+    partial void OnDaysChanging(System.Nullable<int> value);
+    partial void OnDaysChanged();
+    partial void OnDiscountChanging(System.Nullable<int> value);
+    partial void OnDiscountChanged();
+    #endregion
+		
+		public DiscountService()
+		{
+			this._CasualBookings = new EntitySet<CasualBooking>(new Action<CasualBooking>(this.attach_CasualBookings), new Action<CasualBooking>(this.detach_CasualBookings));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ServiceId
+		{
+			get
+			{
+				return this._ServiceId;
+			}
+			set
+			{
+				if ((this._ServiceId != value))
+				{
+					this.OnServiceIdChanging(value);
+					this.SendPropertyChanging();
+					this._ServiceId = value;
+					this.SendPropertyChanged("ServiceId");
+					this.OnServiceIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceName", DbType="NVarChar(100)")]
+		public string ServiceName
+		{
+			get
+			{
+				return this._ServiceName;
+			}
+			set
+			{
+				if ((this._ServiceName != value))
+				{
+					this.OnServiceNameChanging(value);
+					this.SendPropertyChanging();
+					this._ServiceName = value;
+					this.SendPropertyChanged("ServiceName");
+					this.OnServiceNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartDate", DbType="Date")]
+		public System.Nullable<System.DateTime> StartDate
+		{
+			get
+			{
+				return this._StartDate;
+			}
+			set
+			{
+				if ((this._StartDate != value))
+				{
+					this.OnStartDateChanging(value);
+					this.SendPropertyChanging();
+					this._StartDate = value;
+					this.SendPropertyChanged("StartDate");
+					this.OnStartDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Days", DbType="Int")]
+		public System.Nullable<int> Days
+		{
+			get
+			{
+				return this._Days;
+			}
+			set
+			{
+				if ((this._Days != value))
+				{
+					this.OnDaysChanging(value);
+					this.SendPropertyChanging();
+					this._Days = value;
+					this.SendPropertyChanged("Days");
+					this.OnDaysChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Discount", DbType="Int")]
+		public System.Nullable<int> Discount
+		{
+			get
+			{
+				return this._Discount;
+			}
+			set
+			{
+				if ((this._Discount != value))
+				{
+					this.OnDiscountChanging(value);
+					this.SendPropertyChanging();
+					this._Discount = value;
+					this.SendPropertyChanged("Discount");
+					this.OnDiscountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DiscountService_CasualBooking", Storage="_CasualBookings", ThisKey="ServiceId", OtherKey="ServiceId")]
+		public EntitySet<CasualBooking> CasualBookings
+		{
+			get
+			{
+				return this._CasualBookings;
+			}
+			set
+			{
+				this._CasualBookings.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_CasualBookings(CasualBooking entity)
+		{
+			this.SendPropertyChanging();
+			entity.DiscountService = this;
+		}
+		
+		private void detach_CasualBookings(CasualBooking entity)
+		{
+			this.SendPropertyChanging();
+			entity.DiscountService = null;
 		}
 	}
 	
@@ -179,11 +1533,11 @@ namespace LINQ
 		
 		private System.Nullable<int> _TotalPrice;
 		
-		private EntityRef<DiscountService> _DiscountService;
-		
 		private EntityRef<Employee> _Employee;
 		
 		private EntityRef<Field> _Field;
+		
+		private EntityRef<DiscountService> _DiscountService;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -215,9 +1569,9 @@ namespace LINQ
 		
 		public CasualBooking()
 		{
-			this._DiscountService = default(EntityRef<DiscountService>);
 			this._Employee = default(EntityRef<Employee>);
 			this._Field = default(EntityRef<Field>);
+			this._DiscountService = default(EntityRef<DiscountService>);
 			OnCreated();
 		}
 		
@@ -453,40 +1807,6 @@ namespace LINQ
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DiscountService_CasualBooking", Storage="_DiscountService", ThisKey="ServiceId", OtherKey="ServiceId", IsForeignKey=true)]
-		public DiscountService DiscountService
-		{
-			get
-			{
-				return this._DiscountService.Entity;
-			}
-			set
-			{
-				DiscountService previousValue = this._DiscountService.Entity;
-				if (((previousValue != value) 
-							|| (this._DiscountService.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._DiscountService.Entity = null;
-						previousValue.CasualBookings.Remove(this);
-					}
-					this._DiscountService.Entity = value;
-					if ((value != null))
-					{
-						value.CasualBookings.Add(this);
-						this._ServiceId = value.ServiceId;
-					}
-					else
-					{
-						this._ServiceId = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("DiscountService");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_CasualBooking", Storage="_Employee", ThisKey="EmployeeId", OtherKey="EmployeeId", IsForeignKey=true)]
 		public Employee Employee
 		{
@@ -555,1356 +1875,36 @@ namespace LINQ
 			}
 		}
 		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DiscountServices")]
-	public partial class DiscountService : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ServiceId;
-		
-		private string _ServiceName;
-		
-		private System.Nullable<System.DateTime> _StartDate;
-		
-		private System.Nullable<int> _Days;
-		
-		private System.Nullable<int> _Discount;
-		
-		private EntitySet<CasualBooking> _CasualBookings;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnServiceIdChanging(int value);
-    partial void OnServiceIdChanged();
-    partial void OnServiceNameChanging(string value);
-    partial void OnServiceNameChanged();
-    partial void OnStartDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnStartDateChanged();
-    partial void OnDaysChanging(System.Nullable<int> value);
-    partial void OnDaysChanged();
-    partial void OnDiscountChanging(System.Nullable<int> value);
-    partial void OnDiscountChanged();
-    #endregion
-		
-		public DiscountService()
-		{
-			this._CasualBookings = new EntitySet<CasualBooking>(new Action<CasualBooking>(this.attach_CasualBookings), new Action<CasualBooking>(this.detach_CasualBookings));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ServiceId
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DiscountService_CasualBooking", Storage="_DiscountService", ThisKey="ServiceId", OtherKey="ServiceId", IsForeignKey=true)]
+		public DiscountService DiscountService
 		{
 			get
 			{
-				return this._ServiceId;
+				return this._DiscountService.Entity;
 			}
 			set
 			{
-				if ((this._ServiceId != value))
-				{
-					this.OnServiceIdChanging(value);
-					this.SendPropertyChanging();
-					this._ServiceId = value;
-					this.SendPropertyChanged("ServiceId");
-					this.OnServiceIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceName", DbType="NVarChar(100)")]
-		public string ServiceName
-		{
-			get
-			{
-				return this._ServiceName;
-			}
-			set
-			{
-				if ((this._ServiceName != value))
-				{
-					this.OnServiceNameChanging(value);
-					this.SendPropertyChanging();
-					this._ServiceName = value;
-					this.SendPropertyChanged("ServiceName");
-					this.OnServiceNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartDate", DbType="Date")]
-		public System.Nullable<System.DateTime> StartDate
-		{
-			get
-			{
-				return this._StartDate;
-			}
-			set
-			{
-				if ((this._StartDate != value))
-				{
-					this.OnStartDateChanging(value);
-					this.SendPropertyChanging();
-					this._StartDate = value;
-					this.SendPropertyChanged("StartDate");
-					this.OnStartDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Days", DbType="Int")]
-		public System.Nullable<int> Days
-		{
-			get
-			{
-				return this._Days;
-			}
-			set
-			{
-				if ((this._Days != value))
-				{
-					this.OnDaysChanging(value);
-					this.SendPropertyChanging();
-					this._Days = value;
-					this.SendPropertyChanged("Days");
-					this.OnDaysChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Discount", DbType="Int")]
-		public System.Nullable<int> Discount
-		{
-			get
-			{
-				return this._Discount;
-			}
-			set
-			{
-				if ((this._Discount != value))
-				{
-					this.OnDiscountChanging(value);
-					this.SendPropertyChanging();
-					this._Discount = value;
-					this.SendPropertyChanged("Discount");
-					this.OnDiscountChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DiscountService_CasualBooking", Storage="_CasualBookings", ThisKey="ServiceId", OtherKey="ServiceId")]
-		public EntitySet<CasualBooking> CasualBookings
-		{
-			get
-			{
-				return this._CasualBookings;
-			}
-			set
-			{
-				this._CasualBookings.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_CasualBookings(CasualBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.DiscountService = this;
-		}
-		
-		private void detach_CasualBookings(CasualBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.DiscountService = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employees")]
-	public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _EmployeeId;
-		
-		private string _FullName;
-		
-		private string _Gender;
-		
-		private System.Nullable<System.DateTime> _Birth;
-		
-		private string _Phone;
-		
-		private string _Username;
-		
-		private string _Password;
-		
-		private string _RoleId;
-		
-		private EntitySet<CasualBooking> _CasualBookings;
-		
-		private EntityRef<SalaryPayment> _SalaryPayment;
-		
-		private EntityRef<TimeKeeping> _TimeKeeping;
-		
-		private EntityRef<Role> _Role;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnEmployeeIdChanging(string value);
-    partial void OnEmployeeIdChanged();
-    partial void OnFullNameChanging(string value);
-    partial void OnFullNameChanged();
-    partial void OnGenderChanging(string value);
-    partial void OnGenderChanged();
-    partial void OnBirthChanging(System.Nullable<System.DateTime> value);
-    partial void OnBirthChanged();
-    partial void OnPhoneChanging(string value);
-    partial void OnPhoneChanged();
-    partial void OnUsernameChanging(string value);
-    partial void OnUsernameChanged();
-    partial void OnPasswordChanging(string value);
-    partial void OnPasswordChanged();
-    partial void OnRoleIdChanging(string value);
-    partial void OnRoleIdChanged();
-    #endregion
-		
-		public Employee()
-		{
-			this._CasualBookings = new EntitySet<CasualBooking>(new Action<CasualBooking>(this.attach_CasualBookings), new Action<CasualBooking>(this.detach_CasualBookings));
-			this._SalaryPayment = default(EntityRef<SalaryPayment>);
-			this._TimeKeeping = default(EntityRef<TimeKeeping>);
-			this._Role = default(EntityRef<Role>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeId", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string EmployeeId
-		{
-			get
-			{
-				return this._EmployeeId;
-			}
-			set
-			{
-				if ((this._EmployeeId != value))
-				{
-					this.OnEmployeeIdChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeeId = value;
-					this.SendPropertyChanged("EmployeeId");
-					this.OnEmployeeIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullName", DbType="NVarChar(50)")]
-		public string FullName
-		{
-			get
-			{
-				return this._FullName;
-			}
-			set
-			{
-				if ((this._FullName != value))
-				{
-					this.OnFullNameChanging(value);
-					this.SendPropertyChanging();
-					this._FullName = value;
-					this.SendPropertyChanged("FullName");
-					this.OnFullNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="NVarChar(7)")]
-		public string Gender
-		{
-			get
-			{
-				return this._Gender;
-			}
-			set
-			{
-				if ((this._Gender != value))
-				{
-					this.OnGenderChanging(value);
-					this.SendPropertyChanging();
-					this._Gender = value;
-					this.SendPropertyChanged("Gender");
-					this.OnGenderChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Birth", DbType="Date")]
-		public System.Nullable<System.DateTime> Birth
-		{
-			get
-			{
-				return this._Birth;
-			}
-			set
-			{
-				if ((this._Birth != value))
-				{
-					this.OnBirthChanging(value);
-					this.SendPropertyChanging();
-					this._Birth = value;
-					this.SendPropertyChanged("Birth");
-					this.OnBirthChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="VarChar(11)")]
-		public string Phone
-		{
-			get
-			{
-				return this._Phone;
-			}
-			set
-			{
-				if ((this._Phone != value))
-				{
-					this.OnPhoneChanging(value);
-					this.SendPropertyChanging();
-					this._Phone = value;
-					this.SendPropertyChanged("Phone");
-					this.OnPhoneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="VarChar(100)")]
-		public string Username
-		{
-			get
-			{
-				return this._Username;
-			}
-			set
-			{
-				if ((this._Username != value))
-				{
-					this.OnUsernameChanging(value);
-					this.SendPropertyChanging();
-					this._Username = value;
-					this.SendPropertyChanged("Username");
-					this.OnUsernameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="VarChar(100)")]
-		public string Password
-		{
-			get
-			{
-				return this._Password;
-			}
-			set
-			{
-				if ((this._Password != value))
-				{
-					this.OnPasswordChanging(value);
-					this.SendPropertyChanging();
-					this._Password = value;
-					this.SendPropertyChanged("Password");
-					this.OnPasswordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleId", DbType="VarChar(20)")]
-		public string RoleId
-		{
-			get
-			{
-				return this._RoleId;
-			}
-			set
-			{
-				if ((this._RoleId != value))
-				{
-					if (this._Role.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnRoleIdChanging(value);
-					this.SendPropertyChanging();
-					this._RoleId = value;
-					this.SendPropertyChanged("RoleId");
-					this.OnRoleIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_CasualBooking", Storage="_CasualBookings", ThisKey="EmployeeId", OtherKey="EmployeeId")]
-		public EntitySet<CasualBooking> CasualBookings
-		{
-			get
-			{
-				return this._CasualBookings;
-			}
-			set
-			{
-				this._CasualBookings.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_SalaryPayment", Storage="_SalaryPayment", ThisKey="EmployeeId", OtherKey="EmployeeId", IsUnique=true, IsForeignKey=false)]
-		public SalaryPayment SalaryPayment
-		{
-			get
-			{
-				return this._SalaryPayment.Entity;
-			}
-			set
-			{
-				SalaryPayment previousValue = this._SalaryPayment.Entity;
+				DiscountService previousValue = this._DiscountService.Entity;
 				if (((previousValue != value) 
-							|| (this._SalaryPayment.HasLoadedOrAssignedValue == false)))
+							|| (this._DiscountService.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._SalaryPayment.Entity = null;
-						previousValue.Employee = null;
+						this._DiscountService.Entity = null;
+						previousValue.CasualBookings.Remove(this);
 					}
-					this._SalaryPayment.Entity = value;
+					this._DiscountService.Entity = value;
 					if ((value != null))
 					{
-						value.Employee = this;
-					}
-					this.SendPropertyChanged("SalaryPayment");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_TimeKeeping", Storage="_TimeKeeping", ThisKey="EmployeeId", OtherKey="EmployeeId", IsUnique=true, IsForeignKey=false)]
-		public TimeKeeping TimeKeeping
-		{
-			get
-			{
-				return this._TimeKeeping.Entity;
-			}
-			set
-			{
-				TimeKeeping previousValue = this._TimeKeeping.Entity;
-				if (((previousValue != value) 
-							|| (this._TimeKeeping.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TimeKeeping.Entity = null;
-						previousValue.Employee = null;
-					}
-					this._TimeKeeping.Entity = value;
-					if ((value != null))
-					{
-						value.Employee = this;
-					}
-					this.SendPropertyChanged("TimeKeeping");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Role_Employee", Storage="_Role", ThisKey="RoleId", OtherKey="RoleId", IsForeignKey=true)]
-		public Role Role
-		{
-			get
-			{
-				return this._Role.Entity;
-			}
-			set
-			{
-				Role previousValue = this._Role.Entity;
-				if (((previousValue != value) 
-							|| (this._Role.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Role.Entity = null;
-						previousValue.Employees.Remove(this);
-					}
-					this._Role.Entity = value;
-					if ((value != null))
-					{
-						value.Employees.Add(this);
-						this._RoleId = value.RoleId;
+						value.CasualBookings.Add(this);
+						this._ServiceId = value.ServiceId;
 					}
 					else
 					{
-						this._RoleId = default(string);
+						this._ServiceId = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("Role");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_CasualBookings(CasualBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee = this;
-		}
-		
-		private void detach_CasualBookings(CasualBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Fields")]
-	public partial class Field : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _FieldId;
-		
-		private string _FieldName;
-		
-		private System.Nullable<int> _Location;
-		
-		private System.Nullable<int> _TypeId;
-		
-		private EntitySet<CasualBooking> _CasualBookings;
-		
-		private EntityRef<FieldType> _FieldType;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnFieldIdChanging(int value);
-    partial void OnFieldIdChanged();
-    partial void OnFieldNameChanging(string value);
-    partial void OnFieldNameChanged();
-    partial void OnLocationChanging(System.Nullable<int> value);
-    partial void OnLocationChanged();
-    partial void OnTypeIdChanging(System.Nullable<int> value);
-    partial void OnTypeIdChanged();
-    #endregion
-		
-		public Field()
-		{
-			this._CasualBookings = new EntitySet<CasualBooking>(new Action<CasualBooking>(this.attach_CasualBookings), new Action<CasualBooking>(this.detach_CasualBookings));
-			this._FieldType = default(EntityRef<FieldType>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FieldId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int FieldId
-		{
-			get
-			{
-				return this._FieldId;
-			}
-			set
-			{
-				if ((this._FieldId != value))
-				{
-					this.OnFieldIdChanging(value);
-					this.SendPropertyChanging();
-					this._FieldId = value;
-					this.SendPropertyChanged("FieldId");
-					this.OnFieldIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FieldName", DbType="NVarChar(50)")]
-		public string FieldName
-		{
-			get
-			{
-				return this._FieldName;
-			}
-			set
-			{
-				if ((this._FieldName != value))
-				{
-					this.OnFieldNameChanging(value);
-					this.SendPropertyChanging();
-					this._FieldName = value;
-					this.SendPropertyChanged("FieldName");
-					this.OnFieldNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location", DbType="Int")]
-		public System.Nullable<int> Location
-		{
-			get
-			{
-				return this._Location;
-			}
-			set
-			{
-				if ((this._Location != value))
-				{
-					this.OnLocationChanging(value);
-					this.SendPropertyChanging();
-					this._Location = value;
-					this.SendPropertyChanged("Location");
-					this.OnLocationChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeId", DbType="Int")]
-		public System.Nullable<int> TypeId
-		{
-			get
-			{
-				return this._TypeId;
-			}
-			set
-			{
-				if ((this._TypeId != value))
-				{
-					if (this._FieldType.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnTypeIdChanging(value);
-					this.SendPropertyChanging();
-					this._TypeId = value;
-					this.SendPropertyChanged("TypeId");
-					this.OnTypeIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Field_CasualBooking", Storage="_CasualBookings", ThisKey="FieldId", OtherKey="FieldId")]
-		public EntitySet<CasualBooking> CasualBookings
-		{
-			get
-			{
-				return this._CasualBookings;
-			}
-			set
-			{
-				this._CasualBookings.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FieldType_Field", Storage="_FieldType", ThisKey="TypeId", OtherKey="TypeId", IsForeignKey=true)]
-		public FieldType FieldType
-		{
-			get
-			{
-				return this._FieldType.Entity;
-			}
-			set
-			{
-				FieldType previousValue = this._FieldType.Entity;
-				if (((previousValue != value) 
-							|| (this._FieldType.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._FieldType.Entity = null;
-						previousValue.Fields.Remove(this);
-					}
-					this._FieldType.Entity = value;
-					if ((value != null))
-					{
-						value.Fields.Add(this);
-						this._TypeId = value.TypeId;
-					}
-					else
-					{
-						this._TypeId = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("FieldType");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_CasualBookings(CasualBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.Field = this;
-		}
-		
-		private void detach_CasualBookings(CasualBooking entity)
-		{
-			this.SendPropertyChanging();
-			entity.Field = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.FieldTypes")]
-	public partial class FieldType : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _TypeId;
-		
-		private string _TypeName;
-		
-		private System.Nullable<int> _CasualRentalPrice;
-		
-		private System.Nullable<int> _FixedRentalPrice;
-		
-		private EntitySet<Field> _Fields;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnTypeIdChanging(int value);
-    partial void OnTypeIdChanged();
-    partial void OnTypeNameChanging(string value);
-    partial void OnTypeNameChanged();
-    partial void OnCasualRentalPriceChanging(System.Nullable<int> value);
-    partial void OnCasualRentalPriceChanged();
-    partial void OnFixedRentalPriceChanging(System.Nullable<int> value);
-    partial void OnFixedRentalPriceChanged();
-    #endregion
-		
-		public FieldType()
-		{
-			this._Fields = new EntitySet<Field>(new Action<Field>(this.attach_Fields), new Action<Field>(this.detach_Fields));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int TypeId
-		{
-			get
-			{
-				return this._TypeId;
-			}
-			set
-			{
-				if ((this._TypeId != value))
-				{
-					this.OnTypeIdChanging(value);
-					this.SendPropertyChanging();
-					this._TypeId = value;
-					this.SendPropertyChanged("TypeId");
-					this.OnTypeIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeName", DbType="NVarChar(50)")]
-		public string TypeName
-		{
-			get
-			{
-				return this._TypeName;
-			}
-			set
-			{
-				if ((this._TypeName != value))
-				{
-					this.OnTypeNameChanging(value);
-					this.SendPropertyChanging();
-					this._TypeName = value;
-					this.SendPropertyChanged("TypeName");
-					this.OnTypeNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CasualRentalPrice", DbType="Int")]
-		public System.Nullable<int> CasualRentalPrice
-		{
-			get
-			{
-				return this._CasualRentalPrice;
-			}
-			set
-			{
-				if ((this._CasualRentalPrice != value))
-				{
-					this.OnCasualRentalPriceChanging(value);
-					this.SendPropertyChanging();
-					this._CasualRentalPrice = value;
-					this.SendPropertyChanged("CasualRentalPrice");
-					this.OnCasualRentalPriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FixedRentalPrice", DbType="Int")]
-		public System.Nullable<int> FixedRentalPrice
-		{
-			get
-			{
-				return this._FixedRentalPrice;
-			}
-			set
-			{
-				if ((this._FixedRentalPrice != value))
-				{
-					this.OnFixedRentalPriceChanging(value);
-					this.SendPropertyChanging();
-					this._FixedRentalPrice = value;
-					this.SendPropertyChanged("FixedRentalPrice");
-					this.OnFixedRentalPriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FieldType_Field", Storage="_Fields", ThisKey="TypeId", OtherKey="TypeId")]
-		public EntitySet<Field> Fields
-		{
-			get
-			{
-				return this._Fields;
-			}
-			set
-			{
-				this._Fields.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Fields(Field entity)
-		{
-			this.SendPropertyChanging();
-			entity.FieldType = this;
-		}
-		
-		private void detach_Fields(Field entity)
-		{
-			this.SendPropertyChanging();
-			entity.FieldType = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Roles")]
-	public partial class Role : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _RoleId;
-		
-		private string _RoleName;
-		
-		private EntitySet<Employee> _Employees;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnRoleIdChanging(string value);
-    partial void OnRoleIdChanged();
-    partial void OnRoleNameChanging(string value);
-    partial void OnRoleNameChanged();
-    #endregion
-		
-		public Role()
-		{
-			this._Employees = new EntitySet<Employee>(new Action<Employee>(this.attach_Employees), new Action<Employee>(this.detach_Employees));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleId", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string RoleId
-		{
-			get
-			{
-				return this._RoleId;
-			}
-			set
-			{
-				if ((this._RoleId != value))
-				{
-					this.OnRoleIdChanging(value);
-					this.SendPropertyChanging();
-					this._RoleId = value;
-					this.SendPropertyChanged("RoleId");
-					this.OnRoleIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleName", DbType="NVarChar(50)")]
-		public string RoleName
-		{
-			get
-			{
-				return this._RoleName;
-			}
-			set
-			{
-				if ((this._RoleName != value))
-				{
-					this.OnRoleNameChanging(value);
-					this.SendPropertyChanging();
-					this._RoleName = value;
-					this.SendPropertyChanged("RoleName");
-					this.OnRoleNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Role_Employee", Storage="_Employees", ThisKey="RoleId", OtherKey="RoleId")]
-		public EntitySet<Employee> Employees
-		{
-			get
-			{
-				return this._Employees;
-			}
-			set
-			{
-				this._Employees.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Employees(Employee entity)
-		{
-			this.SendPropertyChanging();
-			entity.Role = this;
-		}
-		
-		private void detach_Employees(Employee entity)
-		{
-			this.SendPropertyChanging();
-			entity.Role = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SalaryPayments")]
-	public partial class SalaryPayment : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _EmployeeId;
-		
-		private System.Nullable<int> _MonthWorking;
-		
-		private string _Status;
-		
-		private System.Nullable<int> _SALARY;
-		
-		private EntityRef<Employee> _Employee;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnEmployeeIdChanging(string value);
-    partial void OnEmployeeIdChanged();
-    partial void OnMonthWorkingChanging(System.Nullable<int> value);
-    partial void OnMonthWorkingChanged();
-    partial void OnStatusChanging(string value);
-    partial void OnStatusChanged();
-    partial void OnSALARYChanging(System.Nullable<int> value);
-    partial void OnSALARYChanged();
-    #endregion
-		
-		public SalaryPayment()
-		{
-			this._Employee = default(EntityRef<Employee>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeId", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string EmployeeId
-		{
-			get
-			{
-				return this._EmployeeId;
-			}
-			set
-			{
-				if ((this._EmployeeId != value))
-				{
-					if (this._Employee.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnEmployeeIdChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeeId = value;
-					this.SendPropertyChanged("EmployeeId");
-					this.OnEmployeeIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MonthWorking", DbType="Int")]
-		public System.Nullable<int> MonthWorking
-		{
-			get
-			{
-				return this._MonthWorking;
-			}
-			set
-			{
-				if ((this._MonthWorking != value))
-				{
-					this.OnMonthWorkingChanging(value);
-					this.SendPropertyChanging();
-					this._MonthWorking = value;
-					this.SendPropertyChanged("MonthWorking");
-					this.OnMonthWorkingChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="NVarChar(30)")]
-		public string Status
-		{
-			get
-			{
-				return this._Status;
-			}
-			set
-			{
-				if ((this._Status != value))
-				{
-					this.OnStatusChanging(value);
-					this.SendPropertyChanging();
-					this._Status = value;
-					this.SendPropertyChanged("Status");
-					this.OnStatusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SALARY", DbType="Int")]
-		public System.Nullable<int> SALARY
-		{
-			get
-			{
-				return this._SALARY;
-			}
-			set
-			{
-				if ((this._SALARY != value))
-				{
-					this.OnSALARYChanging(value);
-					this.SendPropertyChanging();
-					this._SALARY = value;
-					this.SendPropertyChanged("SALARY");
-					this.OnSALARYChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_SalaryPayment", Storage="_Employee", ThisKey="EmployeeId", OtherKey="EmployeeId", IsForeignKey=true)]
-		public Employee Employee
-		{
-			get
-			{
-				return this._Employee.Entity;
-			}
-			set
-			{
-				Employee previousValue = this._Employee.Entity;
-				if (((previousValue != value) 
-							|| (this._Employee.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Employee.Entity = null;
-						previousValue.SalaryPayment = null;
-					}
-					this._Employee.Entity = value;
-					if ((value != null))
-					{
-						value.SalaryPayment = this;
-						this._EmployeeId = value.EmployeeId;
-					}
-					else
-					{
-						this._EmployeeId = default(string);
-					}
-					this.SendPropertyChanged("Employee");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TimeKeepings")]
-	public partial class TimeKeeping : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _EmployeeId;
-		
-		private System.Nullable<System.DateTime> _DayWorking;
-		
-		private System.Nullable<int> _HOURS;
-		
-		private EntityRef<Employee> _Employee;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnEmployeeIdChanging(string value);
-    partial void OnEmployeeIdChanged();
-    partial void OnDayWorkingChanging(System.Nullable<System.DateTime> value);
-    partial void OnDayWorkingChanged();
-    partial void OnHOURSChanging(System.Nullable<int> value);
-    partial void OnHOURSChanged();
-    #endregion
-		
-		public TimeKeeping()
-		{
-			this._Employee = default(EntityRef<Employee>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeId", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string EmployeeId
-		{
-			get
-			{
-				return this._EmployeeId;
-			}
-			set
-			{
-				if ((this._EmployeeId != value))
-				{
-					if (this._Employee.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnEmployeeIdChanging(value);
-					this.SendPropertyChanging();
-					this._EmployeeId = value;
-					this.SendPropertyChanged("EmployeeId");
-					this.OnEmployeeIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DayWorking", DbType="Date")]
-		public System.Nullable<System.DateTime> DayWorking
-		{
-			get
-			{
-				return this._DayWorking;
-			}
-			set
-			{
-				if ((this._DayWorking != value))
-				{
-					this.OnDayWorkingChanging(value);
-					this.SendPropertyChanging();
-					this._DayWorking = value;
-					this.SendPropertyChanged("DayWorking");
-					this.OnDayWorkingChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOURS", DbType="Int")]
-		public System.Nullable<int> HOURS
-		{
-			get
-			{
-				return this._HOURS;
-			}
-			set
-			{
-				if ((this._HOURS != value))
-				{
-					this.OnHOURSChanging(value);
-					this.SendPropertyChanging();
-					this._HOURS = value;
-					this.SendPropertyChanged("HOURS");
-					this.OnHOURSChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_TimeKeeping", Storage="_Employee", ThisKey="EmployeeId", OtherKey="EmployeeId", IsForeignKey=true)]
-		public Employee Employee
-		{
-			get
-			{
-				return this._Employee.Entity;
-			}
-			set
-			{
-				Employee previousValue = this._Employee.Entity;
-				if (((previousValue != value) 
-							|| (this._Employee.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Employee.Entity = null;
-						previousValue.TimeKeeping = null;
-					}
-					this._Employee.Entity = value;
-					if ((value != null))
-					{
-						value.TimeKeeping = this;
-						this._EmployeeId = value.EmployeeId;
-					}
-					else
-					{
-						this._EmployeeId = default(string);
-					}
-					this.SendPropertyChanged("Employee");
+					this.SendPropertyChanged("DiscountService");
 				}
 			}
 		}
