@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\mycontrols\\discountcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\discountcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4859DEE4-61D4-48D9-99DD-2120FC3D8065}|Services\\Services.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\services\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4859DEE4-61D4-48D9-99DD-2120FC3D8065}|Services\\Services.csproj|solutionrelative:services\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\mycontrols\\discountcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\discountcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\mycontrols\\fieldcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\fieldcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1036B901-381B-4462-96CE-B65C8AD264AF}|GUI\\GUI.csproj|solutionrelative:gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|c:\\users\\admin\\m\u00E1y t\u00EDnh\\nhom13_st3_quanlydatsanthethao\\mycontrols\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4674E1B0-2A3D-4AC9-8EDC-CF93ABA137B5}|MyControls\\MyControls.csproj|solutionrelative:mycontrols\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,52 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DiscountControl.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\DiscountControl.cs",
-              "RelativeDocumentMoniker": "MyControls\\DiscountControl.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\DiscountControl.cs",
-              "RelativeToolTip": "MyControls\\DiscountControl.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAvwFQAAAB4AAAAAAAAAA==",
+              "Title": "EncryptionHelper.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\Services\\EncryptionHelper.cs",
+              "RelativeDocumentMoniker": "Services\\EncryptionHelper.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\Services\\EncryptionHelper.cs",
+              "RelativeToolTip": "Services\\EncryptionHelper.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T11:13:06.574Z",
+              "WhenOpened": "2024-11-26T00:58:38.404Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DiscountControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\DiscountControl.cs",
-              "RelativeDocumentMoniker": "MyControls\\DiscountControl.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\DiscountControl.cs [Design]",
-              "RelativeToolTip": "MyControls\\DiscountControl.cs [Design]",
+              "Title": "FieldControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\FieldControl.cs",
+              "RelativeDocumentMoniker": "MyControls\\FieldControl.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\FieldControl.cs [Design]",
+              "RelativeToolTip": "MyControls\\FieldControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T11:09:34.861Z",
+              "WhenOpened": "2024-11-26T00:57:34.798Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs",
-              "RelativeDocumentMoniker": "GUI\\MainForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs",
-              "RelativeToolTip": "GUI\\MainForm.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAvwKAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T11:09:09.252Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs",
-              "RelativeDocumentMoniker": "GUI\\MainForm.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\GUI\\MainForm.cs [Design]",
-              "RelativeToolTip": "GUI\\MainForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T11:09:07.338Z",
-              "EditorCaption": " [Design]"
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\packages.config",
+              "RelativeDocumentMoniker": "MyControls\\packages.config",
+              "ToolTip": "C:\\Users\\ADMIN\\M\u00E1y t\u00EDnh\\Nhom13_ST3_QuanLyDatSanTheThao\\MyControls\\packages.config",
+              "RelativeToolTip": "MyControls\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-26T00:57:32.999Z",
+              "EditorCaption": ""
             }
           ]
         }

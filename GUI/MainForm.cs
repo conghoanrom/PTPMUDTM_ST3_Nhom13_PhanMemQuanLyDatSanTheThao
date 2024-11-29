@@ -215,7 +215,9 @@ namespace GUI
                 employee.Password = encryptedPassword;
                 db.SubmitChanges();
                 KryptonMessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                this.Visible = false;
+                Form1 form1 = new Form1();
+                form1.ShowDialog();
             }
         }
 

@@ -268,6 +268,7 @@
             // kryptonDateTimePicker1
             // 
             this.kryptonDateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.kryptonDateTimePicker1.Location = new System.Drawing.Point(187, 3);
             this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
             this.kryptonDateTimePicker1.Size = new System.Drawing.Size(271, 38);
